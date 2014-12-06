@@ -42,7 +42,6 @@ namespace filmsGlossary
             term1.Content = changeTerm;
         }  
         
-        //Test comment change
         // Send search term if search bar used
         private async void onSearchSubmit(object sender, RoutedEventArgs e)
         {   
