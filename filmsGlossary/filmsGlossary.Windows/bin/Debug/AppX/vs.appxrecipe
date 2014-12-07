@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>79c62122-f2c9-45da-8749-0dbd98a0aa3d</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>7DEE90ED38F1A3700CE486EDFC91DCC027C972D0A87BB5097D048A3013E8339B</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>20C7F75F3EDFC24AC88D439D28AC73416FAD0328B2EF40216ECF53F2AA9FDF5C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>79c62122-f2c9-45da-8749-0dbd98a0aa3d_1.0.0.0_neutral__bme28qw9yyzpj</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>79c62122-f2c9-45da-8749-0dbd98a0aa3d_bme28qw9yyzpj!App</RegisteredUserModeAppID>
     <RegisteredPackageID>79c62122-f2c9-45da-8749-0dbd98a0aa3d</RegisteredPackageID>
@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-05T19:43:00.327</Modified>
+      <Modified>2014-12-07T22:39:38.034</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\filmsGlossary.Windows.exe">
       <PackagePath>filmsGlossary.Windows.exe</PackagePath>
-      <Modified>2014-12-06T15:03:09.702</Modified>
+      <Modified>2014-12-07T22:39:37.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\MySQL\MySQL Connector Net 6.9.5\Assemblies\RT\MySql.Data.RT.dll">
       <PackagePath>MySql.Data.RT.dll</PackagePath>
@@ -39,7 +39,7 @@
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-14T10:55:28.000</Modified>
+      <Modified>2014-12-07T22:25:24.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
@@ -58,19 +58,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-12-05T19:17:27.113</Modified>
+      <Modified>2014-12-07T22:32:39.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2014-12-06T15:03:09.488</Modified>
+      <Modified>2014-12-07T22:37:41.284</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\filmsGlossary.Windows.xr.xml">
       <PackagePath>filmsGlossary.Windows.xr.xml</PackagePath>
-      <Modified>2014-12-06T15:03:09.476</Modified>
+      <Modified>2014-12-07T21:57:02.440</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-06T15:01:00.040</Modified>
+      <Modified>2014-12-07T22:39:37.969</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

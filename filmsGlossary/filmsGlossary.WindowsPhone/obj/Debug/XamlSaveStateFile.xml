@@ -1,5 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\james\onedrive\coding\projects\filmglossary\filmsglossary\filmsglossary\filmsglossary.windowsphone\obj\debug\intermediatexaml\filmsglossary.windowsphone.exe" HashGuid="6ac2b1fd-02b3-674b-0201-57be19bdf0df" />
+    <LocalAssembly PathName="c:\users\james\onedrive\coding\projects\filmglossary\filmsglossary\filmsglossary\filmsglossary.windowsphone\obj\debug\intermediatexaml\filmsglossary.windowsphone.exe" HashGuid="1c532481-484d-70cf-af92-b9982ebef9e5" />
+    <ReferenceAssembly PathName="c:\users\james\onedrive\coding\projects\filmglossary\filmsglossary\packages\newtonsoft.json.6.0.6\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="9e796421-3b84-3ec5-6e39-cb6d41d020b7" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

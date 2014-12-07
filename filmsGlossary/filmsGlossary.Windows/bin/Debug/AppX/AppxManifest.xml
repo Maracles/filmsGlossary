@@ -22,7 +22,12 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="filmsGlossary.Windows.exe" EntryPoint="filmsGlossary.Windows.App">
-      <m2:VisualElements DisplayName="filmsGlossary.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="filmsGlossary.Windows" ForegroundText="light" BackgroundColor="#464646">
+      <m2:VisualElements DisplayName="Film Glossary" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Film Glossary Description" ForegroundText="light" BackgroundColor="#464646">
+        <m2:DefaultTile>
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
     </Application>

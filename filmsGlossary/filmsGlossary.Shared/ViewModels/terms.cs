@@ -11,6 +11,12 @@ namespace filmsGlossary.ViewModels
     class terms
     {
 
+        public string onAppLoad()
+        {
+            var initialTerm = "Loaded String";
+            return initialTerm;
+        }
+
         public string onTermClicked()
         {
             var testTerm = "Follow Focus";
@@ -21,18 +27,17 @@ namespace filmsGlossary.ViewModels
         {
             // Retrieve submitted value
             var value = searchTerm;
-            var newSearchQuery = new Models.database();
 
-            
-            var returnedSearchValue = await newSearchQuery.searchTerm(value);
-            var formattedValue = formatJson(returnedSearchValue);
-            return formattedValue;
+            var returnedSearchValue = await new Models.database().searchTerm(value);
+            dynamic formattedValue = formatJson(returnedSearchValue);
+            dynamic content = ((JArray)formattedValue.terms)[0];
+            return content;
         }
 
+        // Converted returned Object into a JSON object. 
         public object formatJson(object value)
         {
             dynamic jsonTask = value;
-            
             dynamic output = JsonConvert.DeserializeObject(jsonTask);
             dynamic outputArray = ((JArray)output.terms)[0];
             return output;

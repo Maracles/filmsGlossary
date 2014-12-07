@@ -30,3 +30,7 @@ C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary
 C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\qualifiers.txt.intermediate
 C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\ProjectArchitectures.txt
+C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\bin\Debug\Newtonsoft.Json.dll
+C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\bin\Debug\Newtonsoft.Json.xml
+C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\filmsGlossary.WindowsPhone.csprojResolveAssemblyReference.cache
+C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\filmsGlossary.WindowsPhone.csproj.GenerateResource.Cache
