@@ -13,9 +13,9 @@
             <ColumnDefinition Width="337"/>
             <ColumnDefinition Width="1029"/>
         </Grid.ColumnDefinitions>        
-        <GridView x:Name="sidebar" Grid.Column="0" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False">
+        <GridView x:Name="sidebar" Grid.Column="0" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" KeyDown="checkEnter">
             <StackPanel Orientation="Vertical" Margin="0">
-                <TextBox x:Name="searchTerm" TextWrapping="Wrap" Text="enter search term...." Height="15" Width="304" Margin="10,10,10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center"/>
+                <TextBox x:Name="searchTerm" TextWrapping="Wrap" Text="enter search term...." Height="15" Width="304" Margin="10,10,10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" GotFocus="textGotFocus"/>
                 <Button Content="Search" Click="onSearchSubmit" HorizontalAlignment="Center" Margin="0,0,0,50" />
                 <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Terms" Height="20" Width="304" FontSize="18" Margin="0,0,0,20" />
                 <Button Grid.Row="1" x:Name="term1" x:FieldModifier="public" Content="test" Height="50" Width="304" FontSize="18" Click="termButtonClicked" BorderBrush="{x:Null}" FontWeight="Bold" Background="#FF4252F0" BorderThickness="0" />

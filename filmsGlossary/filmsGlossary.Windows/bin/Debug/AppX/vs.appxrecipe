@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\filmsGlossary.Windows.exe">
       <PackagePath>filmsGlossary.Windows.exe</PackagePath>
-      <Modified>2014-12-06T15:03:09.702</Modified>
+      <Modified>2014-12-08T07:45:00.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\MySQL\MySQL Connector Net 6.9.5\Assemblies\RT\MySql.Data.RT.dll">
       <PackagePath>MySql.Data.RT.dll</PackagePath>
@@ -58,19 +58,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-12-05T19:17:27.113</Modified>
+      <Modified>2014-12-08T07:32:17.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2014-12-06T15:03:09.488</Modified>
+      <Modified>2014-12-08T07:45:00.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\filmsGlossary.Windows.xr.xml">
       <PackagePath>filmsGlossary.Windows.xr.xml</PackagePath>
-      <Modified>2014-12-06T15:03:09.476</Modified>
+      <Modified>2014-12-08T07:45:00.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-06T15:01:00.040</Modified>
+      <Modified>2014-12-08T07:45:00.911</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

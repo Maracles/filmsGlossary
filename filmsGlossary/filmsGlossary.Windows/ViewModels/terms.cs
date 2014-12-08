@@ -10,6 +10,12 @@ namespace filmsGlossary.ViewModels
 {
     class terms
     {
+        public string onAppLoad()
+        {
+            var initialTerm = "Loaded String";
+            return initialTerm;
+        }
+
 
         public string onTermClicked()
         {

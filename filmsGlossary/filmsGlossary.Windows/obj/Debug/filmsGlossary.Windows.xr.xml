@@ -25,6 +25,7 @@
       <RootProperty Name="IsTapEnabled" />
       <RootProperty Name="Items" />
       <RootProperty Name="Margin" />
+      <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
@@ -47,6 +48,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="GotFocus" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
