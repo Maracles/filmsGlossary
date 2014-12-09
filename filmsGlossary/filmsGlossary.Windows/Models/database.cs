@@ -11,20 +11,25 @@ namespace filmsGlossary.Models
 {
     class database
     {
-        // Need to sort out escaping invalid charters when searching for terms. 
+        /// <summary>
+        /// Create URI to send to web service and instantiate new HTTP client
+        /// Query webservice and handle success and fail responses. 
+        /// </summary>
+        /// <param name="value">The term entered by the user when searching.</param>
+        /// <returns>A JSON string of the query response.</returns>
+        /// 
+        /// *****Need to sort out escaping invalid charters when searching for terms. *****
+ 
         public async Task<string> searchDatabase(string value)
         {
+            string  baseURI     = "http://localhost/filmgloss/webService/web-service.php?termName=";
+            var     searchString = value;
+            var     searchFormat = "&format=json";
             
-            //Store user search string into variable and create URI for sending
-            string baseURI = "http://localhost/filmgloss/webService/web-service.php?termName=";
-            var searchString = value;
-            var searchFormat = "&format=json";
-            
-            string userURI = baseURI + searchString + searchFormat;
+            string  userURI = baseURI + searchString + searchFormat;
 
             var httpClient = new HttpClient();
 
-            // Query Webservice and retrieve results
             try
             {
                 var response = await httpClient.GetAsync(userURI);
@@ -35,14 +40,12 @@ namespace filmsGlossary.Models
             }
             catch (HttpRequestException hre)
             {
-               var content = "There has been a Http Request Exception";
-               return content;
-
+                var  content = "Response: " + hre.ToString(); 
+                return content;
             }
             catch (Exception ex)
             {
-                // For debugging
-                var content = "There has been an exception";
+                var content = "Response: " +  ex.ToString();
                 return content;
             }
         }

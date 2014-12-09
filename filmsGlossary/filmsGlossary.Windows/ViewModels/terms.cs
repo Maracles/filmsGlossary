@@ -23,16 +23,20 @@ namespace filmsGlossary.ViewModels
             return testTerm.ToString();
         }
 
+        // Called when a search is made
+        // Call database method and query database
+        // Deserialze then converts string into Json Object
+        // JArray selects the first term in the object. 
         public async Task<object> onSearchSubmitted(string userTerm)
         {
-            // Retrieve submitted value
-            var value = userTerm;
-            var newSearchQuery = new Models.database();
+           dynamic newSearchQuery = await new Models.database().searchDatabase(userTerm);
 
+           dynamic resultsJsonObject = JsonConvert.DeserializeObject(newSearchQuery);
+           dynamic resultsJsonArray = ((JArray)resultsJsonObject.terms)[0];
+           return resultsJsonArray;
             
-            var returnedSearchValue = await newSearchQuery.searchDatabase(value);
-            var formattedValue = formatJson(returnedSearchValue);
-            return formattedValue;
+            //var formattedValue = formatJson(newSearchQuery);
+            //return formattedValue;
         }
 
         public object formatJson(object value)

@@ -66,32 +66,31 @@ namespace filmsGlossary
 
             var searchedTerm = searchTerm.Text.ToString();     
             var newSearchInstance = new ViewModels.terms();
-                   
+
+
+            // Check if search term is null
+            // Retrieve search results in JSON object format
+            // Assign key:value to variables
+            // Add key:value pair to new Collections object and output to XAML
             if (searchedTerm != "")
             {
-                // Create JSON object of returned searchr result
-                dynamic newSearchInstanceValue = await newSearchInstance.onSearchSubmitted(searchedTerm);
-                dynamic content = ((JArray)newSearchInstanceValue.terms)[0];
                 
-                //Set Variables for Data Binding
-                dynamic name = content.term.termName.ToString();
-                dynamic description = content.term.termDescription.ToString();
+                dynamic newSearchInstanceValue = await newSearchInstance.onSearchSubmitted(searchedTerm);
+                
+                dynamic name = newSearchInstanceValue.term.termName.ToString();
+                dynamic description = newSearchInstanceValue.term.termDescription.ToString();
 
-                //Create New Film Term Object and Add it to MyTerms Collection
                 MyTerms.Add(new ViewModels.FilmTerm(name, description));
 
-                //Set Display Fields
                 termName.DataContext = MyTerms[0].Name;
                 termDescription.DataContext = MyTerms[0].Description;
 
             }
             else
             {
-
                 //Output to View
                 termName.Text = "Search Field Empty";
                 termDescription.Text = "You have not entered anything. Please enter the term you'd like us to find."; 
-
             }
         }
 
