@@ -18,8 +18,10 @@
                 <TextBox x:ConnectionId='2' x:Name="searchTerm" TextWrapping="Wrap" Text="enter search term...." Height="15" Width="304" Margin="10,10,10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center"                             />
                 <Button x:ConnectionId='3' Content="Search"                             HorizontalAlignment="Center" Margin="0,0,0,50" />
                 <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Terms" Height="20" Width="304" FontSize="18" Margin="0,0,0,20" />
-                <Button x:ConnectionId='4' Grid.Row="1" x:Name="term1" x:FieldModifier="public" Content="{Binding}" Height="50" Width="304" FontSize="18"                           BorderBrush="{x:Null}" FontWeight="Bold" Background="#FF4252F0" BorderThickness="0" />
-                <Button x:ConnectionId='5' Grid.Row="1" x:Name="term2" x:FieldModifier="public" Height="50" Width="304" FontSize="18"                           BorderBrush="{x:Null}" FontWeight="Bold" Background="#FF4252F0" BorderThickness="0" />
+                    <ListView x:Name="termsList"  Grid.RowSpan="2">
+                        <!--<Button x:Name="term1" x:FieldModifier="public" Content="{Binding}" Height="50" Width="304" FontSize="18" Click="termButtonClicked" BorderBrush="{x:Null}" FontWeight="Bold" Background="#FF4252F0" BorderThickness="0" />
+                        <Button x:Name="term2" x:FieldModifier="public" Height="50" Width="304" FontSize="18" Click="termButtonClicked" BorderBrush="{x:Null}" FontWeight="Bold" Background="#FF4252F0" BorderThickness="0" />-->
+                    </ListView>
             </StackPanel>
 
         </GridView>

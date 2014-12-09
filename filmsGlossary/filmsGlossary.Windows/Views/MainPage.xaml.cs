@@ -38,15 +38,17 @@ namespace filmsGlossary
             this.InitializeComponent();
             //appTermInitialisation();
             
+
+
         }
         
-
-        // On appLoad change the content of the buttons to those of the terms 
-        // retrieved from the data base
+        /// <summary>
+        /// On appLoad change the content of the buttons to those of the terms retrieved from the data base  
+        /// </summary>
         public void appTermInitialisation()
         {
             var initialisationValue = new ViewModels.terms().onAppLoad();
-            term1.Content = initialisationValue.ToString();
+            //term1.Content = initialisationValue.ToString();
         }
 
         // Send search term if term button clicked
@@ -55,23 +57,23 @@ namespace filmsGlossary
             var buttonMethod = new ViewModels.terms();
             var changeTerm = buttonMethod.onTermClicked();
 
-            term1.Content = changeTerm;
+           // term1.Content = changeTerm;
         }
 
-        // Send search term if search button pressed. 
-        //<param = sender> Not actually sure what this is - find out. 
-        //<param = e> Not actually sure what this is - find out. 
+        
+        /// <summary>
+        /// If user submits a search send entered term to Search classes
+        /// Take returned JSon object and bind it to various XAML controls 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void userSearchSubmitted(object sender, RoutedEventArgs e)
         {
 
             var searchedTerm = searchTerm.Text.ToString();     
             var newSearchInstance = new ViewModels.terms();
+            ListView listView1 = termsList;
 
-
-            // Check if search term is null
-            // Retrieve search results in JSON object format
-            // Assign key:value to variables
-            // Add key:value pair to new Collections object and output to XAML
             if (searchedTerm != "")
             {
                 
@@ -85,26 +87,40 @@ namespace filmsGlossary
                 termName.DataContext = MyTerms[0].Name;
                 termDescription.DataContext = MyTerms[0].Description;
 
+                
+                termsList.Items.Add(name);
+                //termsList.Items.Add("Item 2");
+                //termsList.Items.Add("Item 3");
+                //termsList.Items.Add("Item 4");
+                //termsList.Items.Add("Item 5");
+
             }
             else
             {
-                //Output to View
                 termName.Text = "Search Field Empty";
                 termDescription.Text = "You have not entered anything. Please enter the term you'd like us to find."; 
             }
         }
 
-        //If the user sets focus on the textbox
-        //clear the text that it is more user friendly to enter text
+        
+        
+        /// <summary>
+        /// If the user sets focus on the textbox clear the text that it is more user friendly to enter text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchboxGotFocus(object sender, RoutedEventArgs e)
         {
             searchTerm.Text = "";
 
         }
 
-        //If the user preses term on the textbox 
-        //call the search method and retrieve the term. This is a shortcut to 
-        //clicking the submit button. 
+        /// <summary>
+        /// If the user preses term on the textbox call the search method and retrieve the term. 
+        /// This is a shortcut to clicking the submit button. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
             var keyCode = e.Key.ToString();
@@ -115,12 +131,6 @@ namespace filmsGlossary
                 userSearchSubmitted(sender, e);
             }
         }
-            
-        
 
     }
-
-    
-
-    
 }

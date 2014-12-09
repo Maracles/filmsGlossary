@@ -19,15 +19,13 @@ namespace filmsGlossary.Models
         /// <returns>A JSON string of the query response.</returns>
         /// 
         /// *****Need to sort out escaping invalid charters when searching for terms. *****
- 
         public async Task<string> searchDatabase(string value)
         {
             string  baseURI     = "http://localhost/filmgloss/webService/web-service.php?termName=";
             var     searchString = value;
             var     searchFormat = "&format=json";
-            
             string  userURI = baseURI + searchString + searchFormat;
-
+            
             var httpClient = new HttpClient();
 
             try
