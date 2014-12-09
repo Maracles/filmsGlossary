@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -21,18 +22,24 @@ using Windows.UI.Xaml.Navigation;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace filmsGlossary
-{
+{   
+     
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public partial class MainPage : Page
     {
+        public ObservableCollection<ViewModels.FilmTerm> MyTerms = new ObservableCollection<ViewModels.FilmTerm>();
 
         public MainPage()
-        {
+        {   
+
             this.InitializeComponent();
-            appTermInitialisation();
+            //appTermInitialisation();
+            
         }
+        
 
         // On appLoad change the content of the buttons to those of the terms 
         // retrieved from the data base
@@ -51,24 +58,32 @@ namespace filmsGlossary
             term1.Content = changeTerm;
         }
 
-        // Send search term if search bar used
+        // Send search term if search button pressed. 
         //<param = sender> Not actually sure what this is - find out. 
         //<param = e> Not actually sure what this is - find out. 
-        private async void onSearchSubmit(object sender, RoutedEventArgs e)
-        {   
-            
-            var newSearchInstance = new ViewModels.terms();
-            var searchedTerm = searchTerm.Text.ToString();            
+        private async void userSearchSubmitted(object sender, RoutedEventArgs e)
+        {
 
+            var searchedTerm = searchTerm.Text.ToString();     
+            var newSearchInstance = new ViewModels.terms();
+                   
             if (searchedTerm != "")
             {
-                // Set termName to the value returned
+                // Create JSON object of returned searchr result
                 dynamic newSearchInstanceValue = await newSearchInstance.onSearchSubmitted(searchedTerm);
                 dynamic content = ((JArray)newSearchInstanceValue.terms)[0];
                 
-                //Output to View
-                termName.Text = content.term.termName.ToString();
-                termDescription.Text = content.term.termDescription.ToString(); 
+                //Set Variables for Data Binding
+                dynamic name = content.term.termName.ToString();
+                dynamic description = content.term.termDescription.ToString();
+
+                //Create New Film Term Object and Add it to MyTerms Collection
+                MyTerms.Add(new ViewModels.FilmTerm(name, description));
+
+                //Set Display Fields
+                termName.DataContext = MyTerms[0].Name;
+                termDescription.DataContext = MyTerms[0].Description;
+
             }
             else
             {
@@ -82,7 +97,7 @@ namespace filmsGlossary
 
         //If the user sets focus on the textbox
         //clear the text that it is more user friendly to enter text
-        private void textGotFocus(object sender, RoutedEventArgs e)
+        private void searchboxGotFocus(object sender, RoutedEventArgs e)
         {
             searchTerm.Text = "";
 
@@ -91,66 +106,22 @@ namespace filmsGlossary
         //If the user preses term on the textbox 
         //call the search method and retrieve the term. This is a shortcut to 
         //clicking the submit button. 
-        private void checkEnter(object sender, KeyRoutedEventArgs e)
+        private void onSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
             var keyCode = e.Key.ToString();
 
 
             if (keyCode.ToString() == "Enter")
             {
-                onSearchSubmit(sender, e);
+                userSearchSubmitted(sender, e);
             }
         }
             
-        //// Query database and retrieve search results
-        //private async void retrieveTerm(object term)
-        //{
-        //    //Set format and retrieve term searched
-        //    var searchFormat = "&format=json";
-        //    var termValue = term;
-
-        //    //Clean textblocks
-        //    termName.Text = "";
-        //    termDescription.Text = "";
-
-        //    var httpClient = new HttpClient(); 
         
-        //    try
-        //    {                     
-        //        //Set web service URL format
-        //        string baseURI = "http://localhost/filmgloss/webService/web-service.php?termName=";
-        //        string userURI = baseURI + termValue + searchFormat;
-
-        //        //Send URL to web service and retrieve response code. 
-        //        var response = await httpClient.GetAsync(userURI);
-        //        response.EnsureSuccessStatusCode();
-
-        //        var content = await response.Content.ReadAsStringAsync();
-
-        //        dynamic output = JsonConvert.DeserializeObject(content);
-        //        dynamic firstTerm = ((JArray)output.terms)[0];
-                
-        //        foreach (var item in firstTerm)
-        //        {
-        //            termName.Text = firstTerm.term.termName.ToString();
-        //            termDescription.Text = firstTerm.term.termDescription.ToString();
-
-        //        }
-
-
-        //    }
-        //    catch (HttpRequestException hre)
-        //    {
-        //        searchStatus.Text = hre.ToString();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // For debugging
-        //        searchStatus.Text = ex.ToString();
-        //    }
-        //}
 
     }
+
+    
+
     
 }

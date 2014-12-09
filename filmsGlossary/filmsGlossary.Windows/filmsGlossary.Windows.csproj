@@ -104,6 +104,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Models\database.cs" />
+    <Compile Include="ViewModels\practiceClasses.cs" />
     <Compile Include="ViewModels\terms.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

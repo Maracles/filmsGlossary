@@ -23,14 +23,14 @@ namespace filmsGlossary.ViewModels
             return testTerm.ToString();
         }
 
-        public async Task<object> onSearchSubmitted(string searchTerm)
+        public async Task<object> onSearchSubmitted(string userTerm)
         {
             // Retrieve submitted value
-            var value = searchTerm;
+            var value = userTerm;
             var newSearchQuery = new Models.database();
 
             
-            var returnedSearchValue = await newSearchQuery.searchTerm(value);
+            var returnedSearchValue = await newSearchQuery.searchDatabase(value);
             var formattedValue = formatJson(returnedSearchValue);
             return formattedValue;
         }

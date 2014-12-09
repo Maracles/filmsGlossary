@@ -12,22 +12,21 @@ namespace filmsGlossary.Models
     class database
     {
         // Need to sort out escaping invalid charters when searching for terms. 
-        public async Task<string> searchTerm(string value)
+        public async Task<string> searchDatabase(string value)
         {
             
-            //Set format and retrieve term searched
+            //Store user search string into variable and create URI for sending
+            string baseURI = "http://localhost/filmgloss/webService/web-service.php?termName=";
+            var searchString = value;
             var searchFormat = "&format=json";
-            var termValue = value;
             
+            string userURI = baseURI + searchString + searchFormat;
+
             var httpClient = new HttpClient();
 
+            // Query Webservice and retrieve results
             try
             {
-                //Set web service URL format
-                string baseURI = "http://localhost/filmgloss/webService/web-service.php?termName=";
-                string userURI = baseURI + termValue + searchFormat;
-
-                //Send URL to web service and retrieve response code. 
                 var response = await httpClient.GetAsync(userURI);
                 response.EnsureSuccessStatusCode();
 

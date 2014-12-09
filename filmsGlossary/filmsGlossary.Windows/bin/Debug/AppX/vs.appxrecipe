@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-05T19:43:00.327</Modified>
+      <Modified>2014-12-08T08:49:32.446</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\filmsGlossary.Windows.exe">
       <PackagePath>filmsGlossary.Windows.exe</PackagePath>
-      <Modified>2014-12-08T07:45:00.738</Modified>
+      <Modified>2014-12-09T10:23:17.694</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\MySQL\MySQL Connector Net 6.9.5\Assemblies\RT\MySql.Data.RT.dll">
       <PackagePath>MySql.Data.RT.dll</PackagePath>
@@ -62,15 +62,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2014-12-08T07:45:00.446</Modified>
+      <Modified>2014-12-09T10:23:17.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\filmsGlossary.Windows.xr.xml">
       <PackagePath>filmsGlossary.Windows.xr.xml</PackagePath>
-      <Modified>2014-12-08T07:45:00.431</Modified>
+      <Modified>2014-12-09T10:08:36.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-08T07:45:00.911</Modified>
+      <Modified>2014-12-09T10:19:36.624</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
