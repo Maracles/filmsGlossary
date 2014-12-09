@@ -30,15 +30,15 @@ namespace filmsGlossary
     /// </summary>
     public partial class MainPage : Page
     {
-        public ObservableCollection<ViewModels.FilmTerm> MyTerms = new ObservableCollection<ViewModels.FilmTerm>();
+        
+        //Observable collection for film terms. 
+        //public ObservableCollection<ViewModels.Term> launchTerms = new ObservableCollection<ViewModels.Term>();
 
         public MainPage()
         {   
 
             this.InitializeComponent();
             //appTermInitialisation();
-            
-
 
         }
         
@@ -47,17 +47,15 @@ namespace filmsGlossary
         /// </summary>
         public void appTermInitialisation()
         {
-            var initialisationValue = new ViewModels.terms().onAppLoad();
-            //term1.Content = initialisationValue.ToString();
+            
+            var initialisationValue = new ViewModels.termHandling().onAppLoad();
+            
         }
 
         // Send search term if term button clicked
         private void termButtonClicked(object sender, RoutedEventArgs e)
         {
-            var buttonMethod = new ViewModels.terms();
-            var changeTerm = buttonMethod.onTermClicked();
-
-           // term1.Content = changeTerm;
+            
         }
 
         
@@ -69,31 +67,24 @@ namespace filmsGlossary
         /// <param name="e"></param>
         private async void userSearchSubmitted(object sender, RoutedEventArgs e)
         {
-
-            var searchedTerm = searchTerm.Text.ToString();     
-            var newSearchInstance = new ViewModels.terms();
-            ListView listView1 = termsList;
+            var searchedTerm = searchTerm.Text.ToString();
+            ListView termsList = termsListContainer;
 
             if (searchedTerm != "")
             {
                 
-                dynamic newSearchInstanceValue = await newSearchInstance.onSearchSubmitted(searchedTerm);
+                dynamic newSearchInstanceValue = await new ViewModels.termHandling().sendSearchToDatabase(searchedTerm);
+                int count = newSearchInstanceValue.Count;
+
+                for (int i = 0; i < count; i++)
+                {
+                    termsList.Items.Add(newSearchInstanceValue[i].TermName);
+                    //termsList.ItemsSource = launchTerms[i].TermName;
+                }
+
+                //termName.DataContext = MyTerms[0].Name;
+                //termDescription.DataContext = MyTerms[0].Description;
                 
-                dynamic name = newSearchInstanceValue.term.termName.ToString();
-                dynamic description = newSearchInstanceValue.term.termDescription.ToString();
-
-                MyTerms.Add(new ViewModels.FilmTerm(name, description));
-
-                termName.DataContext = MyTerms[0].Name;
-                termDescription.DataContext = MyTerms[0].Description;
-
-                
-                termsList.Items.Add(name);
-                //termsList.Items.Add("Item 2");
-                //termsList.Items.Add("Item 3");
-                //termsList.Items.Add("Item 4");
-                //termsList.Items.Add("Item 5");
-
             }
             else
             {
@@ -123,14 +114,12 @@ namespace filmsGlossary
         /// <param name="e"></param>
         private void onSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
-            var keyCode = e.Key.ToString();
-
-
-            if (keyCode.ToString() == "Enter")
+            
+            if (e.Key == Windows.System.VirtualKey.Enter)
             {
                 userSearchSubmitted(sender, e);
             }
         }
-
+        
     }
 }

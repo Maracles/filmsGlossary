@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\james\onedrive\coding\projects\filmglossary\filmsglossary\filmsglossary\filmsglossary.windows\obj\debug\intermediatexaml\filmsglossary.windows.exe" HashGuid="ce5185b0-ef70-a431-4d25-a6d91aa4f819" />
+    <LocalAssembly PathName="c:\users\james\onedrive\coding\projects\filmglossary\filmsglossary\filmsglossary\filmsglossary.windows\obj\debug\intermediatexaml\filmsglossary.windows.exe" HashGuid="421a82de-a247-b2bf-ba64-a909600d019b" />
     <ReferenceAssembly PathName="c:\program files (x86)\mysql\mysql connector net 6.9.5\assemblies\rt\mysql.data.rt.dll" HashGuid="54e76f53-2d38-2fe9-aec1-e819a592cedf" />
     <ReferenceAssembly PathName="c:\users\james\onedrive\coding\projects\filmglossary\filmsglossary\packages\newtonsoft.json.6.0.6\lib\netcore45\newtonsoft.json.dll" HashGuid="63116148-54c9-33e9-c28b-753c429e654f" />
   </ReferenceAssemblyList>
