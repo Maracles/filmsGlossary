@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Windows.Foundation.Collections;
 
 
-namespace filmsGlossary.ViewModels
+namespace FilmsGlossary.ViewModels
 {
     
     
@@ -35,12 +35,10 @@ namespace filmsGlossary.ViewModels
         }
         
     }
-    
-    class termHandling
+
+    class AppLoad
     {
-        public ObservableCollection<ViewModels.Term> launchTerms = new ObservableCollection<ViewModels.Term>();
-        
-        
+
         /// <summary>
         /// Methods to be run on app load
         /// </summary>
@@ -50,6 +48,12 @@ namespace filmsGlossary.ViewModels
             var initialTerm = "Loaded String";
             return initialTerm;
         }
+
+    }
+    
+    class Search
+    {
+        public ObservableCollection<ViewModels.Term> launchTerms = new ObservableCollection<ViewModels.Term>();
 
         ///// <summary>
         ///// Responsds to when user clicks a button.
@@ -66,24 +70,23 @@ namespace filmsGlossary.ViewModels
         // Deserialze then converts string into Json Object
         // JArray selects the first term in the object. 
 
-        public async Task<object> sendSearchToDatabase(string userTerm)
+        public async Task<object> QueryRequest(string userTerm)
         {
-           dynamic newSearchQuery = await new Models.database().searchDatabase(userTerm);
+            dynamic newSearchQuery = await new Models.Data().SearchDatabase(userTerm);
 
-           dynamic resultsJsonObject = JsonConvert.DeserializeObject(newSearchQuery);
-           dynamic resultsJsonArray = ((JArray)resultsJsonObject.terms);
+            dynamic resultsJsonObject = JsonConvert.DeserializeObject(newSearchQuery);
+            dynamic resultsJsonArray = ((JArray)resultsJsonObject.terms);
 
 
            foreach (var item in resultsJsonArray)
            {
-               string itemName = item.term.termName.ToString();
-               string itemDescription = item.term.termDescription.ToString();
+                
+                string itemName = item.term.termName.ToString();
+                string itemDescription = item.term.termDescription.ToString();
 
-               // New Term Object
-               filmsGlossary.ViewModels.Term term = new ViewModels.Term(itemName, itemDescription);
-
-               // Add to collection
-               launchTerms.Add(term);
+                // New Term Object and add to collection
+                FilmsGlossary.ViewModels.Term term = new ViewModels.Term(itemName, itemDescription);
+                launchTerms.Add(term);
            }
 
            return launchTerms;
@@ -91,10 +94,6 @@ namespace filmsGlossary.ViewModels
             //var formattedValue = formatJson(newSearchQuery);
             //return formattedValue;
         }
-
-    
-
         
-
     }
 }

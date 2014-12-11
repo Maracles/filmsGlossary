@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace filmsGlossary.Models
+namespace FilmsGlossary.Models
 {
-    class database
+    class Data
     {
         /// <summary>
         /// Create URI to send to web service and instantiate new HTTP client
@@ -19,18 +19,22 @@ namespace filmsGlossary.Models
         /// <returns>A JSON string of the query response.</returns>
         /// 
         /// *****Need to sort out escaping invalid charters when searching for terms. *****
-        public async Task<string> searchDatabase(string value)
+        public async Task<string> SearchDatabase(string value)
         {
             string  baseURI     = "http://localhost/filmgloss/webService/web-service.php?termName=";
             var     searchString = value;
             var     searchFormat = "&format=json";
-            string  userURI = baseURI + searchString + searchFormat;
-            
+            //string  userURI = baseURI + searchString + searchFormat;
+            StringBuilder userURI = new StringBuilder(baseURI);
+            userURI.Append(searchString);
+            userURI.Append(searchFormat);         
+ 
+
             var httpClient = new HttpClient();
 
             try
             {
-                var response = await httpClient.GetAsync(userURI);
+                var response = await httpClient.GetAsync(userURI.ToString());
                 response.EnsureSuccessStatusCode();
 
                 var content = await response.Content.ReadAsStringAsync();

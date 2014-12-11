@@ -19,91 +19,109 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace filmsGlossary
+namespace FilmsGlossary
 {   
      
-
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public partial class MainPage : Page
     {
         
-        //Observable collection for film terms. 
-        //public ObservableCollection<ViewModels.Term> launchTerms = new ObservableCollection<ViewModels.Term>();
-
         public MainPage()
         {   
-
             this.InitializeComponent();
             //appTermInitialisation();
-
         }
         
         /// <summary>
         /// On appLoad change the content of the buttons to those of the terms retrieved from the data base  
         /// </summary>
-        public void appTermInitialisation()
-        {
-            
-            var initialisationValue = new ViewModels.termHandling().onAppLoad();
-            
-        }
-
-        // Send search term if term button clicked
-        private void termButtonClicked(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
+        public void AppInitialisation()
+        {   
+            var initialisationValue = new ViewModels.AppLoad().onAppLoad();
+        }        
         
         /// <summary>
         /// If user submits a search send entered term to Search classes
         /// Take returned JSon object and bind it to various XAML controls 
         /// </summary>
+        /// 
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void userSearchSubmitted(object sender, RoutedEventArgs e)
+        private void SubmitSearch(object sender, RoutedEventArgs e)
         {
-            var searchedTerm = searchTerm.Text.ToString();
-            ListView termsList = termsListContainer;
+            ViewModels.validation validation = new ViewModels.validation();
+            
+            var searchValue = searchTerm.Text.ToString();
+            dynamic validateInput = validation.inputNullCheck(searchValue);
+            
+            // Check error code
+            int? errorCode = validateInput.ErrorCode;
 
-            if (searchedTerm != "")
+            if (errorCode == 0)
             {
-                
-                dynamic newSearchInstanceValue = await new ViewModels.termHandling().sendSearchToDatabase(searchedTerm);
-                int count = newSearchInstanceValue.Count;
-
-                for (int i = 0; i < count; i++)
-                {
-                    termsList.Items.Add(newSearchInstanceValue[i].TermName);
-                    //termsList.ItemsSource = launchTerms[i].TermName;
-                }
-
-                //termName.DataContext = MyTerms[0].Name;
-                //termDescription.DataContext = MyTerms[0].Description;
-                
+                SubmitAction(searchValue);
             }
             else
             {
-                termName.Text = "Search Field Empty";
-                termDescription.Text = "You have not entered anything. Please enter the term you'd like us to find."; 
+                DisplayTerms(validateInput);
             }
+
         }
 
-        
-        
         /// <summary>
-        /// If the user sets focus on the textbox clear the text that it is more user friendly to enter text
+        /// Capture the user entered search string..
+        /// If string is null request error.
+        /// NOTE: Need to fix the else statement - does not work properly. 
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void searchboxGotFocus(object sender, RoutedEventArgs e)
+        /// <returns></returns>
+        public async Task<object> SubmitAction(string searchValue)
         {
-            searchTerm.Text = "";
+            
+            dynamic response = await new ViewModels.Search().QueryRequest(searchValue);
+            RemoveTerms();
+            DisplayTerms(response);
+            return response;
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        private void DisplayTerms(object value)
+        {
+            ListView termsList = termsListContainer;
+            dynamic searchResponse = value;
+
+            int count = searchResponse.Count;
+
+            termsList.Items.Add(searchResponse[0].TermName);
+
+            //for (int i = 0; i < count; i++)
+            //{
+                
+            //    termsList.Items.Add(searchResponse[i].TermName);
+            //    //termsList.ItemsSource = launchTerms[i].TermName;
+            //}
+
+
+            
+            //termName.DataContext = MyTerms[0].Name;
+            //termDescription.DataContext = MyTerms[0].Description;
+
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void RemoveTerms ()
+        {
+            
         }
 
         /// <summary>
@@ -112,14 +130,30 @@ namespace filmsGlossary
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void onSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
+        private void OnSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
-            
+            var searchValue = searchTerm.Text.ToString();
+
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
-                userSearchSubmitted(sender, e);
+                SubmitAction(searchValue);
             }
+        }        
+
+
+        
+        /// <summary>
+        /// If the user sets focus on the textbox clear the text that it is more user friendly to enter text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SearchboxGotFocus(object sender, RoutedEventArgs e)
+        {
+            searchTerm.Text = "";
+
         }
+
+        
         
     }
 }

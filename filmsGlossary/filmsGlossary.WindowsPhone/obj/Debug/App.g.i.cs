@@ -11,7 +11,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace filmsGlossary
+namespace FilmsGlossary
 {
 #if !DISABLE_XAML_GENERATED_MAIN
     public static class Program

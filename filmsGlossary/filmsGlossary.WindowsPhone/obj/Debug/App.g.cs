@@ -10,7 +10,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace filmsGlossary
+namespace FilmsGlossary
 {
     partial class App : global::Windows.UI.Xaml.Application, global::Windows.UI.Xaml.Markup.IComponentConnector
     {

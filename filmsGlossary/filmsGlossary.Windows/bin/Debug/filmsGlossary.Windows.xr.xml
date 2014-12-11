@@ -67,6 +67,6 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView" />
-    <RootType FullName="filmsGlossary.MainPage" />
+    <RootType FullName="FilmsGlossary.MainPage" />
   </Roots.RootTypes>
 </Roots>
