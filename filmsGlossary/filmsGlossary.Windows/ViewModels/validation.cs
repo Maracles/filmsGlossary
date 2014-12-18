@@ -1,7 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,37 +10,39 @@ using Windows.Foundation.Collections;
 
 namespace FilmsGlossary.ViewModels
 {
-    class validation
+
+    class ErrorConstants
     {
-        
-        // Temporarily 0 = success, 1 = error
-        public int? ErrorCode { get; set; }
-        public string ErrorName { get; set; }
-        public string ErrorMessage { get; set; }
-        
-        //Constructor    
-        public validation ()
-        {
+        public const int EmptyInput = 1;
+        public const int NullInput = 2;
+    }
 
-        }
-            
+    /// <summary>
+    /// To avoid errors check that the user's input is valid. 
+    /// </summary>
+    class Validation
+    {
+        public int? ErrorCode { get; private set; }
+        public string ErrorName { get; private set; }
+        public string ErrorMessage { get; private set; }
 
-        public object inputNullCheck(string input)
+        public Boolean HasError { get { return ErrorCode.HasValue; } }    
+        
+        public Validation ValidateInput(string input)
         {
-            if (input != "")
+            if (input == null)
             {
-                this.ErrorCode = 0;
-                this.ErrorName = "Success";
-                this.ErrorMessage = "Valid input received";
-                return this;
+                this.ErrorCode = ErrorConstants.NullInput;
+                this.ErrorName = "Input null";
+                this.ErrorMessage = "Given input is null";
             }
-            else
+            else if (input.Length == 0)
             {
-                this.ErrorCode = 1;
+                this.ErrorCode = ErrorConstants.EmptyInput;
                 this.ErrorName = "Input Empty";
                 this.ErrorMessage = "You have not input anything.";
-                return this; 
             }
+            return this;
         }
     }
 

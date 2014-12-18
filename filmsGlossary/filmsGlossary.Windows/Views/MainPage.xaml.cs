@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using FilmsGlossary.ViewModels;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
@@ -19,7 +20,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace FilmsGlossary
@@ -30,98 +30,40 @@ namespace FilmsGlossary
     /// </summary>
     public partial class MainPage : Page
     {
-        
         public MainPage()
         {   
-            this.InitializeComponent();
-            //appTermInitialisation();
+            //this.InitializeComponent();
+            InitializeComponent();
+            DataContext = new MainViewModel();
         }
-        
-        /// <summary>
-        /// On appLoad change the content of the buttons to those of the terms retrieved from the data base  
-        /// </summary>
-        public void AppInitialisation()
-        {   
-            var initialisationValue = new ViewModels.AppLoad().onAppLoad();
-        }        
-        
+
         /// <summary>
         /// If user submits a search send entered term to Search classes
         /// Take returned JSon object and bind it to various XAML controls 
         /// </summary>
-        /// 
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void SubmitSearch(object sender, RoutedEventArgs e)
         {
-            ViewModels.validation validation = new ViewModels.validation();
-            
-            var searchValue = searchTerm.Text.ToString();
-            dynamic validateInput = validation.inputNullCheck(searchValue);
-            
-            // Check error code
-            int? errorCode = validateInput.ErrorCode;
+            Validation validation = new Validation();
+            Search search = new Search();
+            var searchValue = searchTerm.Text;
 
-            if (errorCode == 0)
+            if (validation.ValidateInput(searchValue).HasError)
             {
-                SubmitAction(searchValue);
+                search.SubmitAction(searchValue);
             }
             else
             {
-                DisplayTerms(validateInput);
+                search.SubmitAction(searchValue);
             }
 
         }
 
         /// <summary>
-        /// Capture the user entered search string..
-        /// If string is null request error.
-        /// NOTE: Need to fix the else statement - does not work properly. 
-        /// </summary>
-        /// <returns></returns>
-        public async Task<object> SubmitAction(string searchValue)
-        {
-            
-            dynamic response = await new ViewModels.Search().QueryRequest(searchValue);
-            RemoveTerms();
-            DisplayTerms(response);
-            return response;
-        }
-
-        /// <summary>
         /// 
         /// </summary>
-        /// <param name="value"></param>
-        private void DisplayTerms(object value)
+        public void RemoveTerms ()
         {
-            ListView termsList = termsListContainer;
-            dynamic searchResponse = value;
-
-            int count = searchResponse.Count;
-
-            termsList.Items.Add(searchResponse[0].TermName);
-
-            //for (int i = 0; i < count; i++)
-            //{
-                
-            //    termsList.Items.Add(searchResponse[i].TermName);
-            //    //termsList.ItemsSource = launchTerms[i].TermName;
-            //}
-
-
-            
-            //termName.DataContext = MyTerms[0].Name;
-            //termDescription.DataContext = MyTerms[0].Description;
-
-        }
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private void RemoveTerms ()
-        {
-            
+            searchTerm.Text = "";
         }
 
         /// <summary>
@@ -130,30 +72,47 @@ namespace FilmsGlossary
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
+        public void OnSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
-            var searchValue = searchTerm.Text.ToString();
+            ListView termsList = termsListContainer;            
 
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
-                SubmitAction(searchValue);
+                if (e.KeyStatus.RepeatCount == 1)
+                {
+                    SubmitSearch(sender, e);
+
+                }
             }
-        }        
+        }
 
-
-        
         /// <summary>
-        /// If the user sets focus on the textbox clear the text that it is more user friendly to enter text
+        /// Remove placeholder text once selected. Employ failsafe to ensure
+        /// that the box is not wiped each time box gets focus, only once 
+        /// per page load. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void SearchboxGotFocus(object sender, RoutedEventArgs e)
+        public void SearchboxGotFocus(object sender, RoutedEventArgs e)
         {
-            searchTerm.Text = "";
+            var placeholderText = "enter search term...";
+            string value = searchTerm.Text;
+
+            if (value == placeholderText)
+            {
+                searchTerm.Text = "";
+            }
 
         }
 
-        
+        private void termClicked(object sender, RoutedEventArgs e)
+        {
+            // hardcoded and needs to retrive content property from button clicked
+            MainViewModel viewModel = new MainViewModel();
+            string test = "BNC";
+
+            viewModel.displayClickedTerm(test);
+        }
         
     }
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{7C7C4104-E0A3-4C3E-A04E-67CE9519E39F}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>filmsGlossary</RootNamespace>
-    <AssemblyName>filmsGlossary.Windows</AssemblyName>
+    <RootNamespace>FilmsGlossary</RootNamespace>
+    <AssemblyName>FilmsGlossary.Windows</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
@@ -103,10 +103,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Models\database.cs" />
-    <Compile Include="ViewModels\validation.cs" />
-    <Compile Include="ViewModels\practiceClasses.cs" />
-    <Compile Include="ViewModels\terms.cs" />
+    <Compile Include="Models\Database.cs" />
+    <Compile Include="ViewModels\Launch.cs" />
+    <Compile Include="ViewModels\Search.cs" />
+    <Compile Include="ViewModels\Validation.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Terms.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

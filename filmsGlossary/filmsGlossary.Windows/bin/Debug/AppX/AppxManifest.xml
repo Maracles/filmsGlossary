@@ -9,7 +9,7 @@
   -->
   <Identity Name="79c62122-f2c9-45da-8749-0dbd98a0aa3d" Publisher="CN=james" Version="1.0.0.0" ProcessorArchitecture="neutral" />
   <Properties>
-    <DisplayName>filmsGlossary.Windows</DisplayName>
+    <DisplayName>FilmsGlossary.Windows</DisplayName>
     <PublisherDisplayName>james</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -21,8 +21,8 @@
     <Resource Language="EN-US" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="filmsGlossary.Windows.exe" EntryPoint="filmsGlossary.Windows.App">
-      <m2:VisualElements DisplayName="filmsGlossary.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="filmsGlossary.Windows" ForegroundText="light" BackgroundColor="#464646">
+    <Application Id="App" Executable="FilmsGlossary.Windows.exe" EntryPoint="FilmsGlossary.Windows.App">
+      <m2:VisualElements DisplayName="FilmsGlossary.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="FilmsGlossary.Windows" ForegroundText="light" BackgroundColor="#464646">
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
     </Application>
