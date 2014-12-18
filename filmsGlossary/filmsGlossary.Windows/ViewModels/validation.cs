@@ -1,6 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -10,39 +11,37 @@ using Windows.Foundation.Collections;
 
 namespace FilmsGlossary.ViewModels
 {
-
-    class ErrorConstants
+    class validation
     {
-        public const int EmptyInput = 1;
-        public const int NullInput = 2;
-    }
-
-    /// <summary>
-    /// To avoid errors check that the user's input is valid. 
-    /// </summary>
-    class Validation
-    {
-        public int? ErrorCode { get; private set; }
-        public string ErrorName { get; private set; }
-        public string ErrorMessage { get; private set; }
-
-        public Boolean HasError { get { return ErrorCode.HasValue; } }    
         
-        public Validation ValidateInput(string input)
+        // Temporarily 0 = success, 1 = error
+        public int? ErrorCode { get; set; }
+        public string ErrorName { get; set; }
+        public string ErrorMessage { get; set; }
+        
+        //Constructor    
+        public validation ()
         {
-            if (input == null)
+
+        }
+            
+
+        public object inputNullCheck(string input)
+        {
+            if (input != "")
             {
-                this.ErrorCode = ErrorConstants.NullInput;
-                this.ErrorName = "Input null";
-                this.ErrorMessage = "Given input is null";
+                this.ErrorCode = 0;
+                this.ErrorName = "Success";
+                this.ErrorMessage = "Valid input received";
+                return this;
             }
-            else if (input.Length == 0)
+            else
             {
-                this.ErrorCode = ErrorConstants.EmptyInput;
+                this.ErrorCode = 1;
                 this.ErrorName = "Input Empty";
                 this.ErrorMessage = "You have not input anything.";
+                return this; 
             }
-            return this;
         }
     }
 

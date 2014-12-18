@@ -8,6 +8,6 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid" />
-    <RootType FullName="FilmsGlossary.MainPage" />
+    <RootType FullName="filmsGlossary.MainPage" />
   </Roots.RootTypes>
 </Roots>

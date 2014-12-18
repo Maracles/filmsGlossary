@@ -15,7 +15,6 @@ namespace FilmsGlossary.Models
         /// Create URI to send to web service and instantiate new HTTP client
         /// Query webservice and handle success and fail responses. 
         /// </summary>
-        /// 
         /// <param name="value">The term entered by the user when searching.</param>
         /// <returns>A JSON string of the query response.</returns>
         /// 
@@ -24,9 +23,12 @@ namespace FilmsGlossary.Models
         {
             string  baseURI     = "http://localhost/filmgloss/webService/web-service.php?termName=";
             var     searchString = value;
+            var     searchFormat = "&format=json";
             //string  userURI = baseURI + searchString + searchFormat;
             StringBuilder userURI = new StringBuilder(baseURI);
             userURI.Append(searchString);
+            userURI.Append(searchFormat);         
+ 
 
             var httpClient = new HttpClient();
 
