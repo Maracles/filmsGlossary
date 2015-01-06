@@ -20,6 +20,8 @@ using FilmsGlossary.ViewModels;
 
 namespace FilmsGlossary
 {
+    /// This is a test. 
+    
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
