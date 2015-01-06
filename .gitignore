@@ -43,9 +43,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj
-filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj
-filmsGlossary\filmsGlossary\filmsGlossary.Shared\obj
+filmsGlossary/filmsGlossary/filmsGlossary.Windows/obj
+filmsGlossary/filmsGlossary/filmsGlossary.WindowsPhone/obj
+filmsGlossary/filmsGlossary/filmsGlossary.Shared/obj
 
 filmsGlossary/filmsGlossary.WindowsPhone/StyleCop.Cache
 filmsGlossary/filmsGlossary.WindowsPhone/StyleCop.Cache
