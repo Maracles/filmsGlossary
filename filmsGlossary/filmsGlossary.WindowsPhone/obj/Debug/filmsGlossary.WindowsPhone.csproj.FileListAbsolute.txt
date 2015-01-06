@@ -30,3 +30,15 @@ C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary
 C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\qualifiers.txt.intermediate
 C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\ProjectArchitectures.txt
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\App.g.i.cs
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\App.g.cs
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\MainPage.g.i.cs
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\MainPage.g.cs
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\XamlTypeInfo.g.cs
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\App.xaml
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\MainPage.xaml
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\App.xbf
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\MainPage.xbf
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\XamlSaveStateFile.xml
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\filmsGlossary.WindowsPhone.exe
+C:\github\filmsGlossary\filmsGlossary\filmsGlossary.WindowsPhone\obj\Debug\filmsGlossary.WindowsPhone.pdb
