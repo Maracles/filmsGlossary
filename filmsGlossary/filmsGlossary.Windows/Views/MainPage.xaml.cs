@@ -19,6 +19,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FilmsGlossary.Models;
+using FilmsGlossary.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -34,28 +36,29 @@ namespace FilmsGlossary
         {   
             //this.InitializeComponent();
             InitializeComponent();
-            DataContext = new MainViewModel();
+            this.DataContext = new MainViewModel("BNC");
         }
 
         /// <summary>
         /// If user submits a search send entered term to Search classes
         /// Take returned JSon object and bind it to various XAML controls 
         /// </summary>
-        private void SubmitSearch(object sender, RoutedEventArgs e)
+        private async void SubmitSearch(object sender, RoutedEventArgs e)
         {
-            Validation validation = new Validation();
-            Search search = new Search();
-            var searchValue = searchTerm.Text;
+            Validation _validation = new Validation();
+            MainViewModel _search = new MainViewModel(); 
 
-            if (validation.ValidateInput(searchValue).HasError)
+
+            var _searchValue = searchTerm.Text;
+
+            if (_validation.ValidateInput(_searchValue).HasError)
             {
-                search.SubmitAction(searchValue);
+                //DataContext = new MainViewModel(searchValue);
             }
             else
             {
-                search.SubmitAction(searchValue);
+                //this.DataContext = new MainViewModel("BNC");
             }
-
         }
 
         /// <summary>
@@ -74,7 +77,7 @@ namespace FilmsGlossary
         /// <param name="e"></param>
         public void OnSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
-            ListView termsList = termsListContainer;            
+            ListView _termsList = termsListContainer;            
 
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
@@ -95,10 +98,10 @@ namespace FilmsGlossary
         /// <param name="e"></param>
         public void SearchboxGotFocus(object sender, RoutedEventArgs e)
         {
-            var placeholderText = "enter search term...";
-            string value = searchTerm.Text;
+            var _placeholderText = "enter search term...";
+            string _value = searchTerm.Text;
 
-            if (value == placeholderText)
+            if (_value == _placeholderText)
             {
                 searchTerm.Text = "";
             }
@@ -108,10 +111,8 @@ namespace FilmsGlossary
         private void termClicked(object sender, RoutedEventArgs e)
         {
             // hardcoded and needs to retrive content property from button clicked
-            MainViewModel viewModel = new MainViewModel();
-            string test = "BNC";
-
-            viewModel.displayClickedTerm(test);
+            MainViewModel ViewModel = new MainViewModel("BNC");
+            string _test = "BNC";
         }
         
     }

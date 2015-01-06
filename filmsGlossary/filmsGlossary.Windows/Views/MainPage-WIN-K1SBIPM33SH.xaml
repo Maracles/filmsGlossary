@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="FilmsGlossary.MainPage"
+    x:FieldModifier="public"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FilmsGlossary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <!-- Container Grid -->
+    <Grid x:Name="grid1" x:FieldModifier="public" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="337"/>
+            <ColumnDefinition Width="1029"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Side Bar-->
+        <GridView x:Name="sidebar" Grid.Column="0" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False">
+            <StackPanel Orientation="Vertical" Margin="0">
+                <TextBox x:Name="searchTerm" TextWrapping="Wrap" Text="enter search term...." Height="15" Width="304" Margin="10,10,10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" GotFocus="SearchboxGotFocus" KeyDown="OnSearchKeyPressDown"/>
+                <Button Content="Search" Click="SubmitSearch" HorizontalAlignment="Center" Margin="0,0,0,50" />
+                <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Terms" Height="20" Width="304" FontSize="18" Margin="0,0,0,20" />
+                    <ListView x:Name="termsListContainer"  Grid.RowSpan="2">
+                    </ListView>
+            </StackPanel>
+        </GridView>
+        
+        <!-- Main Content-->
+        <GridView x:Name="mainContent" x:FieldModifier="public" Grid.Column="1" Margin="5,0,-5,0">
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="termName" x:FieldModifier="public" TextWrapping="Wrap" Text="{Binding ElementName=listView1, Path=SelectedItem.termName}" Height="70" Margin="20,10" FontSize="22"></TextBlock>
+                <TextBlock x:Name="termDescription" TextWrapping="Wrap" Text="{Binding}" FontSize="14" Margin="20,10,20,50" />
+                <TextBlock x:Name="searchStatus" TextWrapping="Wrap" Text="" Margin="20,10" />
+            </StackPanel>
+
+        </GridView>
+
+    </Grid>
+</Page>
