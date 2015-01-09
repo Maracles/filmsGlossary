@@ -17,9 +17,7 @@ namespace FilmsGlossary.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        // An event
-        private RelayCommand _updateNameCommand;
-
+        
         //member variables
         private ObservableCollection<Term> TermName;
 
@@ -49,17 +47,16 @@ namespace FilmsGlossary.ViewModels
         {
             DisplayLaunchTerms(term); 
 
-            //Test
-            //Test 2
         }
 
+
         // Return a observabe collection to be displayed
-        public async Task<ObservableCollection<Term>> DisplayLaunchTerms(string searchValue)
+        public ObservableCollection<Term> DisplayLaunchTerms(string searchValue)
         {
             ObservableCollection<Term> TermsCollection = null;
             ObservableCollection<Term> result = null;
-            
-            result = await QueryRequest(searchValue);
+
+            result = QueryRequest(searchValue).Result;
             TermsCollection = result;
             return TermsCollection;
         }
@@ -67,8 +64,8 @@ namespace FilmsGlossary.ViewModels
         // Query the model for the data
         public async Task<ObservableCollection<Term>> QueryRequest(string userTerm)
         {
-            var searchTerm = await new Models.Data().GetResponse(userTerm);
-            return searchTerm;
+            var searchTerm = new Models.Data().GetResponse(userTerm);
+            return searchTerm.Result;
         }
 
 

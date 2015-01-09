@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.exe">
       <PackagePath>FilmsGlossary.Windows.exe</PackagePath>
-      <Modified>2015-01-09T08:04:13.887</Modified>
+      <Modified>2015-01-09T09:09:26.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>

@@ -35,10 +35,10 @@ namespace FilmsGlossary.Models
 
             try
             {
-                var response = await httpClient.GetAsync(userURI.ToString());
+                var response = await httpClient.GetAsync(userURI.ToString()).ConfigureAwait(false);
                 response.EnsureSuccessStatusCode();
 
-                var content = await response.Content.ReadAsStringAsync();
+                var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                 var formattedContent = FormatResponse(content);
                 return formattedContent;
             }
