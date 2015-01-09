@@ -14,10 +14,14 @@ namespace FilmsGlossary.ViewModels
         public MainPageViewModelTest()
         {
             MyCustomer = new Customer()
-            { FirstName = "Bob", LastName = "Smith" };
+            { 
+                FirstName = "Bob", 
+                LastName = "Smith" 
+            };
         }
 
         private RelayCommand _updateNameCommand;
+
         private void UpdateName ()
         {
             MyCustomer.FirstName = "Sue";

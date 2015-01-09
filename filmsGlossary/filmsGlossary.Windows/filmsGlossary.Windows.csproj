@@ -111,7 +111,7 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Models\Database.cs" />
-    <Compile Include="Models\testModel.cs" />
+    <Compile Include="Models\customers.cs" />
     <Compile Include="ViewModels\Launch.cs" />
     <Compile Include="ViewModels\MainPageViewModelTest.cs" />
     <Compile Include="ViewModels\Search.cs" />
@@ -147,9 +147,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data.RT">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.5\Assemblies\RT\MySql.Data.RT.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
     </Reference>

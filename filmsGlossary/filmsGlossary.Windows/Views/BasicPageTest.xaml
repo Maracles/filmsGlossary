@@ -46,7 +46,7 @@
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
-        <Grid Grid.Column="0" Grid.Row="1" Margin="120,0,0,0" Width="Auto">
+        <Grid Grid.Column="0" Grid.Row="1" Margin="110,0,10,0" Width="Auto">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
@@ -63,7 +63,7 @@
             <TextBox Grid.Row="1" Grid.Column="1"
                      Text="{Binding Path=MyCustomer.LastName}"></TextBox>
             <Button Grid.Row="2" Grid.Column="1"
-                    Content="Update Name" Command="{Binding Path=UpdateNameCommand}" />
+                    Content="Update Name" Command="{Binding Path=UpdateNameCommand}" Click="Button_Click" />
         </Grid>
     </Grid>
 </Page>

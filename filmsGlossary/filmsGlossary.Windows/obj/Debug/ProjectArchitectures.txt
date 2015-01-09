@@ -1,1 +1,1 @@
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\filmsGlossary.Windows.csproj;neutral
+C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\filmsGlossary.Windows.csproj;neutral

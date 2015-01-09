@@ -22,14 +22,6 @@ namespace FilmsGlossary.ViewModels
 
         //member variables
         private ObservableCollection<Term> TermName;
-        private ObservableCollection<Term> TermDescription;
-        private String Test;
-        
-
-        private void UpdateName()
-        {
-
-        }
 
         #region MainViewModel Parameters
 
@@ -43,50 +35,25 @@ namespace FilmsGlossary.ViewModels
                 NotifyPropertyChanged();
             }
         }
-
-        public string SelectedX
-        {
-            get { return Test; }
-            set
-            {
-                Test = value;
-                NotifyPropertyChanged();
-            }
-        }
-
-        public RelayCommand UpdateNameCommand
-        {
-            get
-            {
-                if (_updateNameCommand == null)
-                {
-                    _updateNameCommand = new RelayCommand(UpdateName);
-                }
-                return this._updateNameCommand;
-            }
-            set
-            {
-                this._updateNameCommand = value;
-            }
-        }
         
         #endregion
 
-        // Overloaded Constructor
+        // Constructor
         public MainViewModel()
         {
-            
+
         }
 
         // Overloaded Constructor
         public MainViewModel (string term)
         {
-            ObservableCollection<Term> test = null;
-            DisplayLaunchTerms(term);  
-            
-            var test2 = "";
+            DisplayLaunchTerms(term); 
+
+            //Test
+            //Test 2
         }
 
+        // Return a observabe collection to be displayed
         public async Task<ObservableCollection<Term>> DisplayLaunchTerms(string searchValue)
         {
             ObservableCollection<Term> TermsCollection = null;
@@ -97,6 +64,7 @@ namespace FilmsGlossary.ViewModels
             return TermsCollection;
         }
 
+        // Query the model for the data
         public async Task<ObservableCollection<Term>> QueryRequest(string userTerm)
         {
             var searchTerm = await new Models.Data().GetResponse(userTerm);

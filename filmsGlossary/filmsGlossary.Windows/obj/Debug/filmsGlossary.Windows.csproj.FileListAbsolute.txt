@@ -61,10 +61,8 @@ C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGloss
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\resources.pri
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\AppxManifest.xml
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\filmsGlossary.Windows.build.appxrecipe
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\MySql.Data.RT.dll
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Newtonsoft.Json.dll
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Newtonsoft.Json.xml
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\filmsGlossary.Windows.csprojResolveAssemblyReference.cache
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\App.g.i.cs
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\App.g.cs
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPageTest.g.i.cs
@@ -82,16 +80,6 @@ C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\XamlSaveSt
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\FilmsGlossary.Windows.exe
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\FilmsGlossary.Windows.pdb
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\filmsGlossary.Windows.csproj.GenerateResource.Cache
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\layout.resfiles
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\layout.resfiles.intermediate
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\Resources.resfiles
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\Resources.resfiles.intermediate
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\pri.resfiles
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\pri.resfiles.intermediate
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\priconfig.xml
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\priconfig.xml.intermediate
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT.pri
-C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MySql.Data.RT\qualifiers.txt
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\priconfig.xml
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\priconfig.xml.intermediate
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\layout.resfiles
@@ -104,3 +92,4 @@ C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\qualifiers
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\qualifiers.txt.intermediate
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\ProjectArchitectures.txt
+C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\filmsGlossary.Windows.csprojResolveAssemblyReference.cache

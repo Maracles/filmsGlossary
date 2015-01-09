@@ -1,5 +1,4 @@
-﻿using FilmsGlossary.ViewModels;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
@@ -37,13 +36,15 @@ namespace FilmsGlossary
             //this.InitializeComponent();
             InitializeComponent();
             this.DataContext = new MainViewModel("BNC");
+            
+
         }
 
         /// <summary>
         /// If user submits a search send entered term to Search classes
         /// Take returned JSon object and bind it to various XAML controls 
         /// </summary>
-        private async void SubmitSearch(object sender, RoutedEventArgs e)
+        private void SubmitSearch(object sender, RoutedEventArgs e)
         {
             Validation _validation = new Validation();
             MainViewModel _search = new MainViewModel(); 
@@ -60,21 +61,17 @@ namespace FilmsGlossary
                 //this.DataContext = new MainViewModel("BNC");
             }
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void RemoveTerms ()
-        {
-            searchTerm.Text = "";
-        }
+               
 
         /// <summary>
         /// If the user preses term on the textbox call the search method and retrieve the term. 
         /// This is a shortcut to clicking the submit button. 
         /// </summary>
+        /// 
+        /// 
         /// <param name="sender"></param>
         /// <param name="e"></param>
+
         public void OnSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
             ListView _termsList = termsListContainer;            
@@ -112,7 +109,7 @@ namespace FilmsGlossary
         {
             // hardcoded and needs to retrive content property from button clicked
             MainViewModel ViewModel = new MainViewModel("BNC");
-            string _test = "BNC";
+            //string _test = "BNC";
         }
         
     }
