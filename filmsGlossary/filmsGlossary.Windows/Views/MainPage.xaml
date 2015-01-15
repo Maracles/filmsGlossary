@@ -23,12 +23,12 @@
                 <Button Content="Search" Click="SubmitSearch" HorizontalAlignment="Center" Margin="0,0,0,50" />
                 <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Terms" Height="20" Width="304" FontSize="18" Margin="0,0,0,20" />
             </StackPanel>
-                <ListView x:Name="termsListContainer" ItemsSource="{Binding TermsCollection}" Grid.RowSpan="2" SelectionMode="None">
+                <ListView x:Name="termsListContainer" Grid.RowSpan="2" SelectionMode="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <Button x:Name="termButton" Content="{Binding TermName}" Margin="5" Click="termClicked" />
-                            </StackPanel>
+                            <Button x:Name="termButton" Content="{Binding actorFirst}"  Margin="5" Click="termClicked" />
+                        </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -36,17 +36,18 @@
         
         <!-- Main Content-->
         <GridView x:Name="mainContent" x:FieldModifier="public" Grid.Column="1" Margin="5,0,-5,0" SelectionMode="None">
-            <ListView x:Name="termsList" ItemsSource="{Binding TermsCollection}" Margin="10,50,10,10" SelectedItem="{Binding selectedX}" SelectionMode="None">
+            <ListView x:Name="termsList"  Margin="10,50,10,10" SelectedItem="" SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical" Margin="10">
                             <TextBlock Text="{}" />
-                            <TextBlock Text="{Binding TermDescription, FallbackValue='Nothing Loaded'}" />
+                            <TextBlock Text="Nothing Loaded" />
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </GridView>
-        
+        <TextBlock x:Name="firstName" Text="{Binding FirstName, FallbackValue='James'}" Width="330" Height="50" Margin="0,0,50,50"/>
+        <TextBlock x:Name="lastName" Text="{Binding LastName, TargetNullValue='Unknown'}" Width="330" Height="50"/>
     </Grid>
 </Page>

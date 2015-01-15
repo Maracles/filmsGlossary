@@ -33,10 +33,9 @@ namespace FilmsGlossary
     {
         public MainPage()
         {   
-            //this.InitializeComponent();
             InitializeComponent();
-            this.DataContext = new MainViewModel("BNC");
-            
+            DataContext = person;
+
 
         }
 
@@ -46,20 +45,20 @@ namespace FilmsGlossary
         /// </summary>
         private void SubmitSearch(object sender, RoutedEventArgs e)
         {
-            Validation _validation = new Validation();
-            MainViewModel _search = new MainViewModel(); 
+            //Validation _validation = new Validation();
+            //MainViewModel _search = new MainViewModel(); 
 
 
-            var _searchValue = searchTerm.Text;
+            //var _searchValue = searchTerm.Text;
 
-            if (_validation.ValidateInput(_searchValue).HasError)
-            {
-                //DataContext = new MainViewModel(searchValue);
-            }
-            else
-            {
-                //this.DataContext = new MainViewModel("BNC");
-            }
+            //if (_validation.ValidateInput(_searchValue).HasError)
+            //{
+            //    //DataContext = new MainViewModel(searchValue);
+            //}
+            //else
+            //{
+            //    //this.DataContext = new MainViewModel("BNC");
+            //}
         }
                
 
@@ -74,16 +73,16 @@ namespace FilmsGlossary
 
         public void OnSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
-            ListView _termsList = termsListContainer;            
+            //ListView _termsList = termsListContainer;
 
-            if (e.Key == Windows.System.VirtualKey.Enter)
-            {
-                if (e.KeyStatus.RepeatCount == 1)
-                {
-                    SubmitSearch(sender, e);
+            //if (e.Key == Windows.System.VirtualKey.Enter)
+            //{
+            //    if (e.KeyStatus.RepeatCount == 1)
+            //    {
+            //        SubmitSearch(sender, e);
 
-                }
-            }
+            //    }
+            //}
         }
 
         /// <summary>
@@ -95,22 +94,65 @@ namespace FilmsGlossary
         /// <param name="e"></param>
         public void SearchboxGotFocus(object sender, RoutedEventArgs e)
         {
-            var _placeholderText = "enter search term...";
-            string _value = searchTerm.Text;
+            //var _placeholderText = "enter search term...";
+            //string _value = searchTerm.Text;
 
-            if (_value == _placeholderText)
-            {
-                searchTerm.Text = "";
-            }
+            //if (_value == _placeholderText)
+            //{
+            //    searchTerm.Text = "";
+            //}
 
         }
 
         private void termClicked(object sender, RoutedEventArgs e)
         {
             // hardcoded and needs to retrive content property from button clicked
-            MainViewModel ViewModel = new MainViewModel("BNC");
+            //MainViewModel ViewModel = new MainViewModel("BNC");
             //string _test = "BNC";
         }
+
+        public class Person
+        {
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+
+        }
         
+        public Person person = new Person
+        {
+            FirstName = "Tom",
+            //LastName = "Cruise"
+        };
+        
+
+        
+    
     }
+
+    
+
+
+
+    
+
+    // Either you can use Debugger.Break() or put a break point
+    // in your converter, inorder to step into the debugger.
+    // Personally I like Debugger.Break() as I often use
+    // the "Delete All Breakpoints" function in Visual Studio.
+    //public class MyDebugConverter : IValueConverter
+    //{
+    //    public object Convert(object value, Type targetType,
+    //           object parameter, FilmsGlossary culture)
+    //    {
+    //        System.Diagnostics.Debugger.Break();
+    //        return value;
+    //    }
+
+    //    public object ConvertBack(object value, Type targetType,
+    //           object parameter, FilmsGlossary culture)
+    //    {
+    //        System.Diagnostics.Debugger.Break();
+    //        return value;
+    //    }
+    //}
 }

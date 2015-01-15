@@ -18,8 +18,8 @@ namespace FilmsGlossary.ViewModels
     /// </summary>
     public class Term //: INotifyPropertyChanged
     {
-        private string termName;
-        private string termDescription;
+        private string termName = "Not Set";
+        private string termDescription = "Not Set";
 
         #region Term Parameters
 
@@ -59,7 +59,7 @@ namespace FilmsGlossary.ViewModels
             TermDescription = termDescription;
         }
 
-        //#region Property Changed
+        #region Property Changed
         //public event PropertyChangedEventHandler PropertyChanged;
 
         //internal void OnPropertyChanged([CallerMemberName] string member = "")
@@ -70,6 +70,6 @@ namespace FilmsGlossary.ViewModels
         //        PropertyChanged(this, new PropertyChangedEventArgs(member));
         //    }
         //}
-        //#endregion
+        #endregion
     }
 }

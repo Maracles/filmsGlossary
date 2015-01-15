@@ -15,68 +15,85 @@ using FilmsGlossary.Common;
 
 namespace FilmsGlossary.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel //: INotifyPropertyChanged
     {
         
         //member variables
-        private ObservableCollection<Term> TermName;
+        //private ObservableCollection<Term> TermName;
 
-        #region MainViewModel Parameters
+        //#region MainViewModel Parameters
 
-        // A property
-        public ObservableCollection<Term> TermsCollection
-        {
-            get { return TermName; }
-            set
-            {
-                TermName = value;
-                NotifyPropertyChanged();
-            }
-        }
+        //// A property
+        //public ObservableCollection<Term> TermsCollection
+        //{
+        //    get { return TermName; }
+        //    set
+        //    {
+        //        TermName = value;
+        //        NotifyPropertyChanged();
+        //    }
+        //}
         
-        #endregion
+        //#endregion
 
         // Constructor
         public MainViewModel()
         {
-
+            initialize();
         }
 
         // Overloaded Constructor
         public MainViewModel (string term)
         {
-            DisplayLaunchTerms(term); 
+
+            //DisplayLaunchTerms(term); 
 
         }
 
 
         // Return a observabe collection to be displayed
-        public ObservableCollection<Term> DisplayLaunchTerms(string searchValue)
+        //public ObservableCollection<Term> DisplayLaunchTerms(string searchValue)
+        //{
+        //    //ObservableCollection<Term> TermsCollection = null;
+        //    //ObservableCollection<Term> result = null;
+
+        //    //result = QueryRequest(searchValue);
+        //    //TermsCollection = result;
+        //    //return TermsCollection;
+        //}
+
+        //// Query the model for the data
+        //public ObservableCollection<Term> QueryRequest(string userTerm)
+        //{
+        //    //var searchTerm = new Models.Data().GetResponse(userTerm);
+        //    //return searchTerm.Result;
+        //}
+
+        public void initialize()
         {
-            ObservableCollection<Term> TermsCollection = null;
-            ObservableCollection<Term> result = null;
+            //Sampleclass obj = new Sampleclass();
+            //obj.mytext = "Simple, Sample";
+            //return obj; 
+            //actorFirst = "Tom";
+            //actorLast = "Cruise";
 
-            result = QueryRequest(searchValue).Result;
-            TermsCollection = result;
-            return TermsCollection;
-        }
+            //return actorFirst, actorLast;
 
-        // Query the model for the data
-        public async Task<ObservableCollection<Term>> QueryRequest(string userTerm)
-        {
-            var searchTerm = new Models.Data().GetResponse(userTerm);
-            return searchTerm.Result;
-        }
+            
+            
+         }
+            
 
+        //private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        //{
+        //    var handler = PropertyChanged;
+        //    if (PropertyChanged != null)
+        //        PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        //}
 
-
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            var handler = PropertyChanged;
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        //public event PropertyChangedEventHandler PropertyChanged;
     }
+
+    
+    
 }

@@ -103,6 +103,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ViewModels\Actors.cs" />
     <Compile Include="Views\BasicPageTest.xaml.cs">
       <DependentUpon>BasicPageTest.xaml</DependentUpon>
     </Compile>
@@ -110,7 +111,7 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
-    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\Data.cs" />
     <Compile Include="Models\customers.cs" />
     <Compile Include="ViewModels\Launch.cs" />
     <Compile Include="ViewModels\MainPageViewModelTest.cs" />

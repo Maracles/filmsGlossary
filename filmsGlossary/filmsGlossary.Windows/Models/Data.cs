@@ -35,10 +35,14 @@ namespace FilmsGlossary.Models
 
             try
             {
-                var response = await httpClient.GetAsync(userURI.ToString()).ConfigureAwait(false);
+                var response = await httpClient.GetAsync(userURI.ToString())
+                               .ConfigureAwait(false);
+
                 response.EnsureSuccessStatusCode();
 
-                var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                var content = await response.Content.ReadAsStringAsync()
+                              .ConfigureAwait(false);
+
                 var formattedContent = FormatResponse(content);
                 return formattedContent;
             }
@@ -72,7 +76,9 @@ namespace FilmsGlossary.Models
             {
                 string itemName = resultsJsonArray[i].termName;
                 string itemDescription = resultsJsonArray[i].termDescription;
-                Term term = new Term(itemName, itemDescription);
+                Term term = new Term();
+                    term.TermName = itemName;
+                    term.TermDescription = itemDescription;
 
                 collection.Add(term);
             }
