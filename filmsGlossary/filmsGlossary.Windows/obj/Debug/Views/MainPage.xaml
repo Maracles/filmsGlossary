@@ -17,21 +17,32 @@
         </Grid.ColumnDefinitions>
         
         <!-- Side Bar-->
-        <GridView x:Name="sidebar" Grid.Column="0" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" SelectionMode="None">
-            <StackPanel x:Name="termPanel" Orientation="Vertical" Margin="0">
-                <TextBox x:ConnectionId='2' x:Name="searchTerm" TextWrapping="Wrap" Text="enter search term..." Height="15" Width="304" Margin="10,50,10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center"                                                            />
+        <GridView x:Name="sidebar" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" SelectionMode="None">
+            
+            <!-- Search Items -->
+            <StackPanel x:Name="searchPanel" Orientation="Vertical" Margin="0">
+                <TextBox x:ConnectionId='2' x:Name="searchTerm" TextWrapping="Wrap" Text="enter search term..." Height="15" Width="304" Margin="10,0,10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center"                                                            />
                 <Button x:ConnectionId='3' Content="Search"                      HorizontalAlignment="Center" Margin="0,0,0,50" />
-                <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Terms" Height="20" Width="304" FontSize="18" Margin="0,0,0,20" />
             </StackPanel>
+            
+            <!-- Terms List-->
+            <StackPanel x:Name="terms" Orientation="Vertical" Margin="0">
+                <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Terms" Height="20" Width="304" FontSize="18" Margin="0,0,0,10" />
                 <ListView x:Name="termsListContainer" Grid.RowSpan="2" SelectionMode="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                            <Button x:ConnectionId='1' x:Name="termButton" Content="{Binding actorFirst}"  Margin="5"                     />
+                            <Button x:ConnectionId='1' x:Name="termButton" Content=""  Margin="5"                     />
                         </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+            </StackPanel>
+            <!-- Testing-->
+            <StackPanel Orientation="Vertical" Margin="0">
+                <TextBlock x:Name="firstName" Text="{Binding TermName, FallbackValue='Fallingback'}" Width="100" Height="50"/>
+                <TextBlock x:Name="lastName" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
+            </StackPanel>
         </GridView>
         
         <!-- Main Content-->
@@ -47,8 +58,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </GridView>
-        <TextBlock x:Name="firstName" Text="{Binding FirstName, FallbackValue='James'}" Width="330" Height="50" Margin="0,0,50,50"/>
-        <TextBlock x:Name="lastName" Text="{Binding LastName, TargetNullValue='Unknown'}" Width="330" Height="50"/>
+        
     </Grid>
 </Page>
 

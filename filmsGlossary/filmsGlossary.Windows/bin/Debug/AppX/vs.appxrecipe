@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.exe">
       <PackagePath>FilmsGlossary.Windows.exe</PackagePath>
-      <Modified>2015-01-15T08:33:52.849</Modified>
+      <Modified>2015-01-15T09:11:31.854</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -62,11 +62,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2015-01-15T08:33:52.579</Modified>
+      <Modified>2015-01-15T09:11:31.586</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.xr.xml">
       <PackagePath>FilmsGlossary.Windows.xr.xml</PackagePath>
-      <Modified>2015-01-15T08:33:52.567</Modified>
+      <Modified>2015-01-15T09:11:04.547</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

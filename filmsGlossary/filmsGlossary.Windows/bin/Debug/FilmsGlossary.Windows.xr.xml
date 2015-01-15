@@ -8,7 +8,8 @@
     <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
-    <RootPropertyPathName Name="actorFirst" />
+    <RootPropertyPathName Name="TermDescription" />
+    <RootPropertyPathName Name="TermName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -21,8 +22,8 @@
       <RootProperty Name="RelativeSource" />
       <RootProperty Name="Path" />
       <RootProperty Name="ElementName" />
-      <RootProperty Name="TargetNullValue" />
       <RootProperty Name="FallbackValue" />
+      <RootProperty Name="TargetNullValue" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.RelativeSource" />
     <RootType FullName="System.String" />

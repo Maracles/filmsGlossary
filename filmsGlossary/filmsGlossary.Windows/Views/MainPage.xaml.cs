@@ -34,7 +34,7 @@ namespace FilmsGlossary
         public MainPage()
         {   
             InitializeComponent();
-            DataContext = person;
+            DataContext = term;
 
 
         }
@@ -117,6 +117,12 @@ namespace FilmsGlossary
             public string LastName { get; set; }
 
         }
+
+        public Term term = new Term
+        {
+            TermName = "BNC",
+            TermDescription = "Cable"
+        };
         
         public Person person = new Person
         {
