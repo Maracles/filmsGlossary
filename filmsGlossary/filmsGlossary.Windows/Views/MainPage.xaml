@@ -6,9 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
->
-
-    
+>   
     <!-- Container Grid -->
     <Grid x:Name="grid1" x:FieldModifier="public" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
@@ -21,8 +19,9 @@
             
             <!-- Search Items -->
             <StackPanel x:Name="searchPanel" Orientation="Vertical" Margin="0">
-                <TextBox x:Name="searchTerm" TextWrapping="Wrap" Text="enter search term..." Height="15" Width="304" Margin="10,0,10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" GotFocus="SearchboxGotFocus" KeyDown="OnSearchKeyPressDown"/>
-                <Button Content="Search" Click="SubmitSearch" HorizontalAlignment="Center" Margin="0,0,0,50" />
+				<TextBlock x:Name="searchLabel" Text="SEARCH" Margin="10,20,0,0" /> 
+                <TextBox x:Name="searchTerm" TextWrapping="Wrap" Text="What are you looking for?" Height="15" Width="304" Margin="10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" GotFocus="SearchboxGotFocus" KeyDown="OnSearchKeyPressDown"/>
+                <Button Content="Search" Click="SubmitSearch" HorizontalAlignment="Center" Margin="0,0,0,50" Background="#FF337BAC" />
             </StackPanel>
             
             <!-- Terms List-->
@@ -39,14 +38,18 @@
                 </ListView>
             </StackPanel>
             <!-- Testing-->
-            <StackPanel Orientation="Vertical" Margin="0">
-                <TextBlock x:Name="firstName" Text="{Binding TermName, FallbackValue='Fallingback'}" Width="100" Height="50"/>
-                <TextBlock x:Name="lastName" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
+            <StackPanel x:Name="singlePageStack" Orientation="Vertical" Margin="0">
+                <TextBlock x:Name="singlePageFirstName" Text="{Binding TermName, FallbackValue='Fallingback'}" Width="100" Height="50"/>
+                <TextBlock x:Name="singlePageLastName" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
+            </StackPanel>
+            <StackPanel DataContext="{Binding TermName}" x:Name="mvvmStack" Orientation="Vertical" Margin="0">
+                <TextBlock x:Name="mvvmTerm" Text="{Binding TermName,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
+                <TextBlock x:Name="mvvmDescription" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
             </StackPanel>
         </GridView>
         
         <!-- Main Content-->
-        <GridView x:Name="mainContent" x:FieldModifier="public" Grid.Column="1" Margin="5,0,-5,0" SelectionMode="None">
+        <GridView x:Name="mainContent" x:FieldModifier="public" Grid.Column="1" Margin="5,-10,-5,10" SelectionMode="None">
             <ListView x:Name="termsList"  Margin="10,50,10,10" SelectedItem="" SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>

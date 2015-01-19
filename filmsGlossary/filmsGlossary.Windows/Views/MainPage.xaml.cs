@@ -34,9 +34,8 @@ namespace FilmsGlossary
         public MainPage()
         {   
             InitializeComponent();
-            DataContext = term;
-
-
+            this.DataContext = new MainViewModel();
+            //DataContext = term;
         }
 
         /// <summary>
@@ -129,10 +128,7 @@ namespace FilmsGlossary
             FirstName = "Tom",
             //LastName = "Cruise"
         };
-        
 
-        
-    
     }
 
     

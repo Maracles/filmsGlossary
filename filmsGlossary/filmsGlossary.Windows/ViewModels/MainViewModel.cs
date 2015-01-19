@@ -15,31 +15,12 @@ using FilmsGlossary.Common;
 
 namespace FilmsGlossary.ViewModels
 {
-    public class MainViewModel //: INotifyPropertyChanged
+    public class MainViewModel : INotifyPropertyChanged
     {
-        
-        //member variables
-        //private ObservableCollection<Term> TermName;
-
-        //#region MainViewModel Parameters
-
-        //// A property
-        //public ObservableCollection<Term> TermsCollection
-        //{
-        //    get { return TermName; }
-        //    set
-        //    {
-        //        TermName = value;
-        //        NotifyPropertyChanged();
-        //    }
-        //}
-        
-        //#endregion
-
         // Constructor
         public MainViewModel()
         {
-            initialize();
+            
         }
 
         // Overloaded Constructor
@@ -49,7 +30,6 @@ namespace FilmsGlossary.ViewModels
             //DisplayLaunchTerms(term); 
 
         }
-
 
         // Return a observabe collection to be displayed
         //public ObservableCollection<Term> DisplayLaunchTerms(string searchValue)
@@ -67,31 +47,18 @@ namespace FilmsGlossary.ViewModels
         //{
         //    //var searchTerm = new Models.Data().GetResponse(userTerm);
         //    //return searchTerm.Result;
-        //}
+        //}       
 
-        public void initialize()
+
+
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
-            //Sampleclass obj = new Sampleclass();
-            //obj.mytext = "Simple, Sample";
-            //return obj; 
-            //actorFirst = "Tom";
-            //actorLast = "Cruise";
+            var handler = PropertyChanged;
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
 
-            //return actorFirst, actorLast;
-
-            
-            
-         }
-            
-
-        //private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        //{
-        //    var handler = PropertyChanged;
-        //    if (PropertyChanged != null)
-        //        PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        //}
-
-        //public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 
     

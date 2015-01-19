@@ -16,7 +16,7 @@ namespace FilmsGlossary.ViewModels
     /// <summary>
     /// Object for film terms. 
     /// </summary>
-    public class Term //: INotifyPropertyChanged
+    public class Term : INotifyPropertyChanged
     {
         private string termName = "Not Set";
         private string termDescription = "Not Set";
@@ -29,7 +29,7 @@ namespace FilmsGlossary.ViewModels
                     if (value != termName)
                     {
                         this.termName = value;
-                        //OnPropertyChanged();
+                        OnPropertyChanged();
                     }   
                 }
         }
@@ -41,7 +41,7 @@ namespace FilmsGlossary.ViewModels
                 if (value != termDescription)
                 {
                     this.termDescription = value;
-                    //OnPropertyChanged();
+                    OnPropertyChanged();
                 }
             }
         }
@@ -59,17 +59,13 @@ namespace FilmsGlossary.ViewModels
             TermDescription = termDescription;
         }
 
-        #region Property Changed
-        //public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            var handler = PropertyChanged;
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
 
-        //internal void OnPropertyChanged([CallerMemberName] string member = "")
-        //{
-        //    PropertyChangedEventHandler handler = PropertyChanged;
-        //    if (PropertyChanged != null)
-        //    {
-        //        PropertyChanged(this, new PropertyChangedEventArgs(member));
-        //    }
-        //}
-        #endregion
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
