@@ -42,8 +42,8 @@
                 <TextBlock x:Name="singlePageFirstName" Text="{Binding TermName, FallbackValue='Fallingback'}" Width="100" Height="50"/>
                 <TextBlock x:Name="singlePageLastName" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
             </StackPanel>
-            <StackPanel DataContext="{Binding TermName}" x:Name="mvvmStack" Orientation="Vertical" Margin="0">
-                <TextBlock x:Name="mvvmTerm" Text="{Binding TermName,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
+            <StackPanel x:Name="mvvmStack" Orientation="Vertical" Margin="0">
+                <TextBlock x:Name="mvvmTerm" Text="{Binding Name,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
                 <TextBlock x:Name="mvvmDescription" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
             </StackPanel>
         </GridView>

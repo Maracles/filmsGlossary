@@ -8,8 +8,9 @@
     <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
-    <RootPropertyPathName Name="TermName" />
     <RootPropertyPathName Name="TermDescription" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="TermName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -116,7 +117,6 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
-      <RootProperty Name="DataContext" />
     </RootType>
     <RootType FullName="FilmsGlossary.MainPage" />
   </Roots.RootTypes>

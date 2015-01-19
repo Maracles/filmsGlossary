@@ -6,9 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
->
-
-    
+>   
     <!-- Container Grid -->
     <Grid x:Name="grid1" x:FieldModifier="public" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
@@ -44,8 +42,8 @@
                 <TextBlock x:Name="singlePageFirstName" Text="{Binding TermName, FallbackValue='Fallingback'}" Width="100" Height="50"/>
                 <TextBlock x:Name="singlePageLastName" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
             </StackPanel>
-            <StackPanel DataContext="{Binding TermName}" x:Name="mvvmStack" Orientation="Vertical" Margin="0">
-                <TextBlock x:Name="mvvmTerm" Text="{Binding TermName,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
+            <StackPanel x:Name="mvvmStack" Orientation="Vertical" Margin="0">
+                <TextBlock x:Name="mvvmTerm" Text="{Binding Name,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
                 <TextBlock x:Name="mvvmDescription" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
             </StackPanel>
         </GridView>
