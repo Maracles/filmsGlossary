@@ -70,16 +70,16 @@ namespace FilmsGlossary
 
         public void OnSearchKeyPressDown(object sender, KeyRoutedEventArgs e)
         {
-            //ListView _termsList = termsListContainer;
+            ListView _termsList = termsListContainer;
 
-            //if (e.Key == Windows.System.VirtualKey.Enter)
-            //{
-            //    if (e.KeyStatus.RepeatCount == 1)
-            //    {
-            //        SubmitSearch(sender, e);
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                if (e.KeyStatus.RepeatCount == 1)
+                {
+                    SubmitSearch(sender, e);
 
-            //    }
-            //}
+                }
+            }
         }
 
         /// <summary>
@@ -91,13 +91,12 @@ namespace FilmsGlossary
         /// <param name="e"></param>
         public void SearchboxGotFocus(object sender, RoutedEventArgs e)
         {
-            //var _placeholderText = "enter search term...";
-            //string _value = searchTerm.Text;
+            string _value = searchTerm.PlaceholderText;
 
-            //if (_value == _placeholderText)
-            //{
-            //    searchTerm.Text = "";
-            //}
+            if (_value != "")
+            {
+                searchTerm.PlaceholderText = "";
+            }
 
         }
 
@@ -107,38 +106,7 @@ namespace FilmsGlossary
             //MainViewModel ViewModel = new MainViewModel("BNC");
             //string _test = "BNC";
         }
+                 
+    }    
 
-        public class Person
-        {
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-        }             
-    }
-
-    
-
-
-
-    
-
-    // Either you can use Debugger.Break() or put a break point
-    // in your converter, inorder to step into the debugger.
-    // Personally I like Debugger.Break() as I often use
-    // the "Delete All Breakpoints" function in Visual Studio.
-    //public class MyDebugConverter : IValueConverter
-    //{
-    //    public object Convert(object value, Type targetType,
-    //           object parameter, FilmsGlossary culture)
-    //    {
-    //        System.Diagnostics.Debugger.Break();
-    //        return value;
-    //    }
-
-    //    public object ConvertBack(object value, Type targetType,
-    //           object parameter, FilmsGlossary culture)
-    //    {
-    //        System.Diagnostics.Debugger.Break();
-    //        return value;
-    //    }
-    //}
 }

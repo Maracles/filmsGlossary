@@ -19,7 +19,7 @@ namespace FilmsGlossary.ViewModels
     {
         
         private object _term;
-        private ObservableCollection<Term> _termsCollection;  
+        private object _termsCollection;  
 
         public object Term
         {
@@ -31,13 +31,13 @@ namespace FilmsGlossary.ViewModels
             }
         }
 
-        public ObservableCollection<Term> TermsCollection
+        public object TermsCollection
         {
             get { return _termsCollection; }
             set
             {
                 _termsCollection = value;
-                OnPropertyChanged();
+                //OnPropertyChanged();
             }
         }
 

@@ -20,7 +20,7 @@
             <!-- Search Items -->
             <StackPanel x:Name="searchPanel" Orientation="Vertical" Margin="0">
 				<TextBlock x:Name="searchLabel" Text="SEARCH" Margin="10,20,0,0" /> 
-                <TextBox x:ConnectionId='2' x:Name="searchTerm" TextWrapping="Wrap" Text="What are you looking for?" Height="15" Width="304" Margin="10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center"                                                            />
+                <TextBox x:ConnectionId='2' x:Name="searchTerm" TextWrapping="Wrap" Text="" Height="15" Width="304" Margin="10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center"                                                             PlaceholderText="What are you looking for?"/>
                 <Button x:ConnectionId='3' Content="Search"                      HorizontalAlignment="Center" Margin="0,0,0,50" Background="#FF337BAC" />
             </StackPanel>
             
@@ -36,11 +36,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </StackPanel>
-            <!-- Testing-->            
-            <StackPanel x:Name="mvvmStack" Orientation="Vertical" Margin="0">
-                    <TextBlock x:Name="mvvmTerm" Text="{Binding Term.TermName,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
-                <TextBlock x:Name="mvvmDescription" Text="{Binding Term.TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
             </StackPanel>
             </StackPanel>
         </GridView>
