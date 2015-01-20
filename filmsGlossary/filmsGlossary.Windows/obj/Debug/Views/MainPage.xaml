@@ -27,24 +27,20 @@
             <!-- Terms List-->
             <StackPanel x:Name="terms" Orientation="Vertical" Margin="0">
                 <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Terms" Height="20" Width="304" FontSize="18" Margin="0,0,0,10" />
-                <ListView x:Name="termsListContainer" Grid.RowSpan="2" SelectionMode="None">
+                    <ListView ItemsSource="{Binding TermsCollection}" x:Name="termsListContainer" Grid.RowSpan="2" SelectionMode="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                            <Button x:ConnectionId='1' x:Name="termButton" Content=""  Margin="5"                     />
+                            <Button x:ConnectionId='1' x:Name="termButton" Content="{Binding TermName, FallbackValue='Not Working'}"  Margin="5"                     />
                         </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </StackPanel>
-            <!-- Testing-->
-            <StackPanel x:Name="singlePageStack" Orientation="Vertical" Margin="0">
-                <TextBlock x:Name="singlePageFirstName" Text="{Binding TermName, FallbackValue='Fallingback'}" Width="100" Height="50"/>
-                <TextBlock x:Name="singlePageLastName" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
-            </StackPanel>
+            <!-- Testing-->            
             <StackPanel x:Name="mvvmStack" Orientation="Vertical" Margin="0">
-                <TextBlock x:Name="mvvmTerm" Text="{Binding Name,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
-                <TextBlock x:Name="mvvmDescription" Text="{Binding Term.TermName, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
+                    <TextBlock x:Name="mvvmTerm" Text="{Binding Term.TermName,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
+                <TextBlock x:Name="mvvmDescription" Text="{Binding Term.TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
             </StackPanel>
             </StackPanel>
         </GridView>

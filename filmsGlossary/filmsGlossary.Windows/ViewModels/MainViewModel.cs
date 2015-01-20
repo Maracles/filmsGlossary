@@ -17,19 +17,9 @@ namespace FilmsGlossary.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        private string _name;
+        
         private object _term;
-
-        //Test Property 
-        public string Name
-        {
-            get { return _name; }
-            set 
-            {
-                _name = value;
-                OnPropertyChanged();
-            }
-        }
+        private ObservableCollection<Term> _termsCollection;  
 
         public object Term
         {
@@ -41,17 +31,21 @@ namespace FilmsGlossary.ViewModels
             }
         }
 
-
-        //Test Method
-        public void SetName(string newName)
+        public ObservableCollection<Term> TermsCollection
         {
-            Name = newName;
+            get { return _termsCollection; }
+            set
+            {
+                _termsCollection = value;
+                OnPropertyChanged();
+            }
         }
+
 
         // Test Constructor
         public MainViewModel()
         {
-            SetName("James");
+            DisplayLaunchTerms("BNC"); 
             SetTerm("Monitor", "Screen");
         }
 
@@ -59,36 +53,28 @@ namespace FilmsGlossary.ViewModels
         public void SetTerm(string termName, string termDescription)
         {
             Term = new Term("Monitor", "Screen");
-        }
-
-        
-        // Overloaded Constructor
-        public MainViewModel (string term)
-        {
-
-            //DisplayLaunchTerms(term); 
-
-        }
+        }   
+       
 
         // Return a observabe collection to be displayed
-        //public ObservableCollection<Term> DisplayLaunchTerms(string searchValue)
-        //{
-        //    //ObservableCollection<Term> TermsCollection = null;
-        //    //ObservableCollection<Term> result = null;
+        public void DisplayLaunchTerms(string searchValue)
+        {
+            ObservableCollection<Term> result = null;
 
-        //    //result = QueryRequest(searchValue);
-        //    //TermsCollection = result;
-        //    //return TermsCollection;
-        //}
+            result = QueryRequest(searchValue);
+            TermsCollection = result; 
+            //return TermsCollection;
+        }
 
         //// Query the model for the data
-        //public ObservableCollection<Term> QueryRequest(string userTerm)
-        //{
-        //    //var searchTerm = new Models.Data().GetResponse(userTerm);
-        //    //return searchTerm.Result;
-        //}       
+        public ObservableCollection<Term> QueryRequest(string userTerm)
+        {
+            var searchTerm = new Models.Data().GetResponse(userTerm);
+            return searchTerm.Result;
+        }       
 
 
+        #region INotifyPropertyChanged handler
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -99,7 +85,9 @@ namespace FilmsGlossary.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(caller));
             }
         }
-        
+
+        #endregion
+
     }
 
     

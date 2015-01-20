@@ -34,8 +34,7 @@ namespace FilmsGlossary
         public MainPage()
         {   
             InitializeComponent();
-            this.DataContext = new MainViewModel();
-            //DataContext = term;
+            this.DataContext = new MainViewModel();            
         }
 
         /// <summary>
@@ -58,8 +57,7 @@ namespace FilmsGlossary
             //{
             //    //this.DataContext = new MainViewModel("BNC");
             //}
-        }
-               
+        }               
 
         /// <summary>
         /// If the user preses term on the textbox call the search method and retrieve the term. 
@@ -114,21 +112,7 @@ namespace FilmsGlossary
         {
             public string FirstName { get; set; }
             public string LastName { get; set; }
-
-        }
-
-        public Term term = new Term
-        {
-            TermName = "BNC",
-            TermDescription = "Cable"
-        };
-        
-        public Person person = new Person
-        {
-            FirstName = "Tom",
-            //LastName = "Cruise"
-        };
-
+        }             
     }
 
     

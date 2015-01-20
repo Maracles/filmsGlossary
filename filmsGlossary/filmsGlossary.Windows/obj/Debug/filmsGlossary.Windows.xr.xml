@@ -9,9 +9,9 @@
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
     <RootPropertyPathName Name="Term" />
-    <RootPropertyPathName Name="TermName" />
-    <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="TermDescription" />
+    <RootPropertyPathName Name="TermName" />
+    <RootPropertyPathName Name="TermsCollection" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -116,6 +116,7 @@
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="ItemsSource" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
