@@ -10,7 +10,6 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using System.Collections.Specialized;
-
 using FilmsGlossary.Models;
 using FilmsGlossary.Common;
 
@@ -19,6 +18,9 @@ namespace FilmsGlossary.ViewModels
     public class MainViewModel : INotifyPropertyChanged
     {
         private string _name;
+        private object _term;
+
+        //Test Property 
         public string Name
         {
             get { return _name; }
@@ -29,17 +31,37 @@ namespace FilmsGlossary.ViewModels
             }
         }
 
+        public object Term
+        {
+            get { return _term; }
+            set
+            {
+                _term = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        //Test Method
         public void SetName(string newName)
         {
             Name = newName;
         }
 
-        // Constructor
+        // Test Constructor
         public MainViewModel()
         {
             SetName("James");
+            SetTerm("Monitor", "Screen");
         }
 
+        //Test Method
+        public void SetTerm(string termName, string termDescription)
+        {
+            Term = new Term("Monitor", "Screen");
+        }
+
+        
         // Overloaded Constructor
         public MainViewModel (string term)
         {

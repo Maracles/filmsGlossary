@@ -8,9 +8,10 @@
     <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
-    <RootPropertyPathName Name="TermDescription" />
-    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="Term" />
     <RootPropertyPathName Name="TermName" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="TermDescription" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -103,6 +104,12 @@
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="Items" />
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootMethod Name="GetHorizontalScrollBarVisibility" />
+      <RootMethod Name="SetHorizontalScrollBarVisibility" />
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Margin" />

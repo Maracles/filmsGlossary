@@ -15,8 +15,8 @@
         </Grid.ColumnDefinitions>
         
         <!-- Side Bar-->
-        <GridView x:Name="sidebar" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" SelectionMode="None">
-            
+        <GridView x:Name="sideGrid" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" SelectionMode="None" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="sideCol" Orientation="Vertical" Margin="0">
             <!-- Search Items -->
             <StackPanel x:Name="searchPanel" Orientation="Vertical" Margin="0">
 				<TextBlock x:Name="searchLabel" Text="SEARCH" Margin="10,20,0,0" /> 
@@ -44,7 +44,8 @@
             </StackPanel>
             <StackPanel x:Name="mvvmStack" Orientation="Vertical" Margin="0">
                 <TextBlock x:Name="mvvmTerm" Text="{Binding Name,  FallbackValue='Fallingback'}" Width="100" Height="50"/>
-                <TextBlock x:Name="mvvmDescription" Text="{Binding TermDescription, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
+                <TextBlock x:Name="mvvmDescription" Text="{Binding Term.TermName, FallbackValue='Fallingback', TargetNullValue='Unknown'}" Width="100" Height="50"/>
+            </StackPanel>
             </StackPanel>
         </GridView>
         

@@ -59,13 +59,16 @@ namespace FilmsGlossary.ViewModels
             TermDescription = termDescription;
         }
 
-        private void OnPropertyChanged([CallerMemberName] String propertyName = "")
+        public event PropertyChangedEventHandler PropertyChanged;
+        
+        private void OnPropertyChanged([CallerMemberName] string caller = "")
         {
-            var handler = PropertyChanged;
             if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(caller));
+            }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        
     }
 }
