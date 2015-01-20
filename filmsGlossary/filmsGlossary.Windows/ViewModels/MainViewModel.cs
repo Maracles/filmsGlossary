@@ -12,59 +12,61 @@ using Windows.UI.Xaml.Media;
 using System.Collections.Specialized;
 using FilmsGlossary.Models;
 using FilmsGlossary.Common;
+using System.Windows.Input;
 
 namespace FilmsGlossary.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        
-        private object _term;
-        private object _termsCollection;  
+        #region Parameters
+
+        private object term;
+        private object termsCollection;  
 
         public object Term
         {
-            get { return _term; }
+            get { return term; }
             set
             {
-                _term = value;
+                term = value;
                 OnPropertyChanged();
             }
         }
 
         public object TermsCollection
         {
-            get { return _termsCollection; }
+            get { return termsCollection; }
             set
             {
-                _termsCollection = value;
+                termsCollection = value;
                 //OnPropertyChanged();
             }
         }
+
+        #endregion  
 
 
         // Test Constructor
         public MainViewModel()
         {
-            DisplayLaunchTerms("BNC"); 
-            SetTerm("Monitor", "Screen");
-        }
-
-        //Test Method
-        public void SetTerm(string termName, string termDescription)
-        {
-            Term = new Term("Monitor", "Screen");
-        }   
-       
+            PopulateSideBar("BNC");                      
+        }     
 
         // Return a observabe collection to be displayed
-        public void DisplayLaunchTerms(string searchValue)
+        public void PopulateSideBar(string searchValue)
         {
-            ObservableCollection<Term> result = null;
+            ObservableCollection<Term> resultCollection = null;
 
-            result = QueryRequest(searchValue);
-            TermsCollection = result; 
-            //return TermsCollection;
+            resultCollection = QueryRequest(searchValue);
+            TermsCollection = resultCollection; 
         }
+
+        public void SearchTerm()
+        {
+
+        }
+
+
 
         //// Query the model for the data
         public ObservableCollection<Term> QueryRequest(string userTerm)

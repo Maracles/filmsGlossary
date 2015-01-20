@@ -21,7 +21,8 @@
             <StackPanel x:Name="searchPanel" Orientation="Vertical" Margin="0">
 				<TextBlock x:Name="searchLabel" Text="SEARCH" Margin="10,20,0,0" /> 
                 <TextBox x:ConnectionId='2' x:Name="searchTerm" TextWrapping="Wrap" Text="" Height="15" Width="304" Margin="10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center"                                                             PlaceholderText="What are you looking for?"/>
-                <Button x:ConnectionId='3' Content="Search"                      HorizontalAlignment="Center" Margin="0,0,0,50" Background="#FF337BAC" />
+                <Button x:ConnectionId='3' Content="Search" Command="{Binding SearchTerm}"                      HorizontalAlignment="Center" Margin="0,0,0,50" Background="#FF337BAC" />
+                    <SearchBox PlaceholderText="What are you looking for?" ></SearchBox>
             </StackPanel>
             
             <!-- Terms List-->

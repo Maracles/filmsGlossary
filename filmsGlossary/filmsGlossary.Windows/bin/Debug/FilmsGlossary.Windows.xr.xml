@@ -2,14 +2,11 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="DefaultViewModel" />
-    <RootPropertyPathName Name="UpdateNameCommand" />
-    <RootPropertyPathName Name="MyCustomer" />
-    <RootPropertyPathName Name="LastName" />
-    <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
     <RootPropertyPathName Name="TermsCollection" />
     <RootPropertyPathName Name="TermName" />
+    <RootPropertyPathName Name="SearchTerm" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -20,7 +17,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="RelativeSource" />
-      <RootProperty Name="Path" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="FallbackValue" />
     </RootType>
@@ -32,8 +28,6 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="ColumnDefinitions" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Width" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -50,36 +44,12 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Inlines" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="IsHitTestVisible" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="FontSize" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Text" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="PlaceholderText" />
-      <RootEvent Name="GotFocus" />
-      <RootEvent Name="KeyDown" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
-      <RootProperty Name="Command" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Command" />
       <RootProperty Name="Style" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
       <RootEvent Name="Click" />
@@ -92,8 +62,19 @@
       <RootMethod Name="GetItemType" />
       <RootMethod Name="SetItemType" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="IsHitTestVisible" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="FontSize" />
+    </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
-    <RootType FullName="FilmsGlossary.BasicPageTest" />
+    <RootType FullName="FilmsGlossary.Views.BasicPage1" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="IsDoubleTapEnabled" />
       <RootProperty Name="IsHoldingEnabled" />
@@ -123,6 +104,21 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="PlaceholderText" />
+      <RootEvent Name="GotFocus" />
+      <RootEvent Name="KeyDown" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
+      <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="FilmsGlossary.MainPage" />
   </Roots.RootTypes>

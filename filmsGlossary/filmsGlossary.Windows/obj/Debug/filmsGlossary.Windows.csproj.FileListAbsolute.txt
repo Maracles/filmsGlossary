@@ -53,7 +53,6 @@ C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary
 C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.exe.CodeAnalysisLog.xml
 C:\Users\james\OneDrive\Coding\Projects\filmGlossary\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.exe.lastcodeanalysissucceeded
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\App.xbf
-C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\BasicPageTest.xbf
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\MainPage.xbf
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.xr.xml
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.exe
@@ -65,15 +64,11 @@ C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Newtonsoft
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Newtonsoft.Json.xml
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\App.g.i.cs
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\App.g.cs
-C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPageTest.g.i.cs
-C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPageTest.g.cs
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\MainPage.g.i.cs
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\MainPage.g.cs
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\XamlTypeInfo.g.cs
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\App.xaml
-C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPageTest.xaml
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\App.xbf
-C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPageTest.xbf
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\XamlSaveStateFile.xml
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\MainPage.xaml
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\MainPage.xbf
@@ -92,4 +87,8 @@ C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\qualifiers
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\qualifiers.txt.intermediate
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\ProjectArchitectures.txt
-C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\filmsGlossary.Windows.csprojResolveAssemblyReference.cache
+C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\BasicPage1.xbf
+C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPage1.g.i.cs
+C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPage1.g.cs
+C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPage1.xaml
+C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\obj\Debug\Views\BasicPage1.xbf

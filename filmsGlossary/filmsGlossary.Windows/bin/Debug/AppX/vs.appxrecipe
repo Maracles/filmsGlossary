@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-01-20T18:37:23.997</Modified>
+      <Modified>2015-01-20T20:43:48.330</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.exe">
       <PackagePath>FilmsGlossary.Windows.exe</PackagePath>
-      <Modified>2015-01-20T18:49:21.945</Modified>
+      <Modified>2015-01-20T20:43:48.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -54,23 +54,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-01-20T18:37:23.341</Modified>
+      <Modified>2015-01-20T20:43:10.781</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\BasicPageTest.xbf">
-      <PackagePath>Views\BasicPageTest.xbf</PackagePath>
-      <Modified>2015-01-20T18:37:23.342</Modified>
+    <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\BasicPage1.xbf">
+      <PackagePath>Views\BasicPage1.xbf</PackagePath>
+      <Modified>2015-01-20T20:43:47.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2015-01-20T18:44:50.077</Modified>
+      <Modified>2015-01-20T20:43:47.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\FilmsGlossary.Windows.xr.xml">
       <PackagePath>FilmsGlossary.Windows.xr.xml</PackagePath>
-      <Modified>2015-01-20T18:44:50.066</Modified>
+      <Modified>2015-01-20T20:43:47.816</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\filmsGlossary\filmsGlossary\filmsGlossary.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-01-20T18:37:23.832</Modified>
+      <Modified>2015-01-20T20:43:48.260</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

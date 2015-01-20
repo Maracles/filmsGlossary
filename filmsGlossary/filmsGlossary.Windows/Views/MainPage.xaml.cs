@@ -43,20 +43,21 @@ namespace FilmsGlossary
         /// </summary>
         private void SubmitSearch(object sender, RoutedEventArgs e)
         {
-            //Validation _validation = new Validation();
-            //MainViewModel _search = new MainViewModel(); 
+            Validation _validation = new Validation();
+            MainViewModel _search = new MainViewModel(); 
 
 
-            //var _searchValue = searchTerm.Text;
+            var _searchValue = searchTerm.Text;
 
-            //if (_validation.ValidateInput(_searchValue).HasError)
-            //{
-            //    //DataContext = new MainViewModel(searchValue);
-            //}
-            //else
-            //{
-            //    //this.DataContext = new MainViewModel("BNC");
-            //}
+            if (_validation.ValidateInput(_searchValue).HasError)
+            {
+                //DataContext = new MainViewModel(searchValue);
+                
+            }
+            else
+            {
+                //this.DataContext = new MainViewModel("BNC");
+            }
         }               
 
         /// <summary>
@@ -102,9 +103,10 @@ namespace FilmsGlossary
 
         private void termClicked(object sender, RoutedEventArgs e)
         {
-            // hardcoded and needs to retrive content property from button clicked
+            //hardcoded and needs to retrive content property from button clicked
             //MainViewModel ViewModel = new MainViewModel("BNC");
-            //string _test = "BNC";
+            //string test = "BNC";
+
         }
                  
     }    

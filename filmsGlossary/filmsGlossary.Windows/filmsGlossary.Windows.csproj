@@ -104,9 +104,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ViewModels\Actors.cs" />
-    <Compile Include="Views\BasicPageTest.xaml.cs">
-      <DependentUpon>BasicPageTest.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
@@ -119,6 +116,9 @@
     <Compile Include="ViewModels\Validation.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Terms.cs" />
+    <Compile Include="Views\BasicPage1.xaml.cs">
+      <DependentUpon>BasicPage1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -138,7 +138,7 @@
     <Content Include="Assets\StoreLogo.scale-100.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\BasicPageTest.xaml">
+    <Page Include="Views\BasicPage1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -21,7 +21,8 @@
             <StackPanel x:Name="searchPanel" Orientation="Vertical" Margin="0">
 				<TextBlock x:Name="searchLabel" Text="SEARCH" Margin="10,20,0,0" /> 
                 <TextBox x:Name="searchTerm" TextWrapping="Wrap" Text="" Height="15" Width="304" Margin="10,20" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" GotFocus="SearchboxGotFocus" KeyDown="OnSearchKeyPressDown" PlaceholderText="What are you looking for?"/>
-                <Button Content="Search" Click="SubmitSearch" HorizontalAlignment="Center" Margin="0,0,0,50" Background="#FF337BAC" />
+                <Button Content="Search" Command="{Binding SearchTerm}" Click="SubmitSearch" HorizontalAlignment="Center" Margin="0,0,0,50" Background="#FF337BAC" />
+                    <SearchBox PlaceholderText="What are you looking for?" ></SearchBox>
             </StackPanel>
             
             <!-- Terms List-->
@@ -31,7 +32,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                            <Button x:Name="termButton" Content="{Binding TermName, FallbackValue='Not Working'}"  Margin="5" Click="termClicked" />
+                                    <Button x:Name="termButton" Content="{Binding TermName, FallbackValue='Not Working'}"  Margin="5" Click="termClicked" />
                         </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -46,7 +47,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical" Margin="10">
-                            <TextBlock Text="{}" />
+                            <TextBlock Text="" />
                             <TextBlock Text="Nothing Loaded" />
                         </StackPanel>
                     </DataTemplate>

@@ -13,17 +13,15 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using FilmsGlossary.Models;
-using FilmsGlossary.ViewModels;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
-namespace FilmsGlossary
+namespace FilmsGlossary.Views
 {
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class BasicPageTest : Page
+    public sealed partial class BasicPage1 : Page
     {
 
         private NavigationHelper navigationHelper;
@@ -47,13 +45,12 @@ namespace FilmsGlossary
         }
 
 
-        public BasicPageTest()
+        public BasicPage1()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
-            this.DataContext = new MainPageViewModelTest();
         }
 
         /// <summary>
@@ -105,10 +102,5 @@ namespace FilmsGlossary
         }
 
         #endregion
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
