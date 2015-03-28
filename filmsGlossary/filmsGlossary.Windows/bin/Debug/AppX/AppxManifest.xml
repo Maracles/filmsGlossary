@@ -36,7 +36,7 @@
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v4.5.1" />
     <build:Item Name="VisualStudio" Version="12.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2013" />
-    <build:Item Name="OperatingSystem" Version="6.4.9841.0 (fbl_release.140912-1613)" />
+    <build:Item Name="OperatingSystem" Version="10.0.10041.0 (fbl_impressive.150313-1821)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="12.0.31101.0" />
     <build:Item Name="ProjectGUID" Value="{7C7C4104-E0A3-4C3E-A04E-67CE9519E39F}" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="12.0.30501.0" />
